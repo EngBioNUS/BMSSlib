@@ -2,7 +2,7 @@
 
 Thank you for downloading BMSSlib! This library supports an automated Bio-Model Selection System which enables users to derive the best mathematical model candidate to capture the transient dynamic gene circuit behaviors in a fast, efficient, and automated way using part/circuit characterization data.
 
-This package supports `__*three*__` routinely used __gene regulatory systems__:
+This package supports __*three*__ routinely used __gene regulatory systems__:
  
 - *Inducible Systems*
 - *Constitutive Systems (Single Dataset or Multiple Datasets)*
