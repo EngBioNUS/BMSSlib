@@ -2,3 +2,5 @@
 - __*Example_InducibleSystem.py*__ (Inducible System)
 - __*Example_ConstitutiveSystem.py*__ (Constitutive System (Single Dataset or Multiple Dataset))
 - __*Example_LogicGatesSystem.py*__ (for Logic Gates System)
+
+![manuscript_figure1]
