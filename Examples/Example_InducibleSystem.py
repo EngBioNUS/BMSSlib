@@ -17,7 +17,7 @@ def main():
     IS = InducibleSystem()    
     
     # User Input (Data FileName and Number of Data Set in the file)
-    Input_filename = 'pBAD_Ara_rbspBb_MG_csv.csv' # Arabinose (Data set 1)
+    Input_filename = 'Inducible_pBADAra_rbspBb_MG.csv' # Arabinose (Data set 1)
     NumDataSet = 9
     Inducer_unit = '%' # Enter only (10**-6, 10**-9 or '%')
     OptInhibition = None
