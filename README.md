@@ -19,7 +19,7 @@ This package supports __*three*__ routinely used __gene regulatory systems__:
 
 ## Installation
 
-BMSSlib is implemented in *Python 3.6.5* environment and can be installed using *pip* as shown below:  
+BMSSlib is implemented in *Python 3.6.5* environment and can be *soon* installed using *pip* as shown below:  
 
 ```
 pip install BMSSlib
