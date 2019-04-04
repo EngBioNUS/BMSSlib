@@ -1,4 +1,4 @@
-# This folder contains the sample scripts to run the three gene regulatory systems: 
+## This folder contains the sample scripts to run the three gene regulatory systems: 
 - __*Example_InducibleSystem.py*__ (Inducible System)
 
 e.g. Arabinose-inducible pBAD promoter
