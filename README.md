@@ -1,3 +1,7 @@
+```diff
+- # <Note: The BMSS system is still under development, and the package will be pip-installable after a while>
+```
+
 # BMSSlib
 
 Thank you for downloading BMSSlib! This library supports an automated Bio-Model Selection System which enables users to derive the best mathematical model candidate to capture the transient dynamic gene circuit behaviors in a fast, efficient, and automated way using part/circuit characterization data.
@@ -19,7 +23,7 @@ This package supports __*three*__ routinely used __gene regulatory systems__:
 
 ## Installation
 
-BMSSlib is implemented in *Python 3.6.5* environment and can be installed using *pip* as shown below:  
+BMSSlib is implemented in *Python 3.6.5* environment and can be *soon* installed using *pip* as shown below:  
 
 ```
 pip install BMSSlib
