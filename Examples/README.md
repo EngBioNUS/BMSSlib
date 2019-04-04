@@ -5,7 +5,7 @@
 ![pBAD_rbspBb_TwoP_GeneCircuit](https://user-images.githubusercontent.com/32381993/55538694-9a755a80-56f1-11e9-8a3c-651e67ba5ad9.png)
 
 
-### Constitutive System (Single Dataset or Multiple Dataset) (__*Example_ConstitutiveSystem.py*__)
+### Constitutive System -Single Dataset or Multiple Dataset (__*Example_ConstitutiveSystem.py*__)
 - e.g. Multiple Constitutive Data (varied promoters with fixed RBS)
 
 ![Constitutive_multi4xfixRBS](https://user-images.githubusercontent.com/32381993/55540054-baf2e400-56f4-11e9-96e6-8f8120c9969e.png)
