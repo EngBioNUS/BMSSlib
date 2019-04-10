@@ -28,14 +28,14 @@ BMSSlib is implemented in *Python 3.6.5* environment and can be *soon* installed
 ```
 pip install BMSSlib
 ```
-New users can first download and install the [Anaconda] distribution and select the Python 3.7 version based on your OS system.  
+New users can first download and install the [Anaconda Distribution] and choose the Python 3.7 version based on the Operating System (Windows, MacOS, Linux).  
 
-__*Note*__: In view of the potential compatibility issues for the different versions of dependencies, it is highly recommended to create virtual environment of Python 3.6.5 in Anaconda. 
+__*Note*__: In view of the potential compatibility issues for the different versions of dependencies, it is highly recommended to create virtual environment of Python 3.6.5 in Anaconda. Open Anaconda Prompt (like command prompt) or Anaconda Navigator (Environments --> base (root) --> Open Terminal) to create a virtual environment as BMSSenv and then activate the environment following the commands below.    
 ```
 conda create -n BMSSenv python=3.6.5 anaconda
 conda activate BMSSenv
 ```
-Two required packages can then be installed using *pip* as follows:
+Two additional required packages, other than those fundamental packages in Anaconda, can then be installed using *pip* as follows:
 ```
 pip install tabulate
 pip install tesbml
@@ -73,5 +73,5 @@ No license. Permission from authors is required.
    [SimpleSBML]: <https://github.com/sys-bio/simplesbml>
    [DNAplotlib]: <https://github.com/VoigtLab/dnaplotlib>
    [constrNMPy]: <https://github.com/alexblaessle/constrNMPy>
-   [Anaconda]: <https://www.anaconda.com/distribution/>
+   [Anaconda Distribution]: <https://www.anaconda.com/distribution/>
 
