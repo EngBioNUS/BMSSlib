@@ -35,14 +35,14 @@ __*Note*__: In view of the potential compatibility issues for the different vers
 conda create -n BMSSenv python=3.6.5 anaconda
 conda activate BMSSenv
 ```
-Two additional required packages, other than those fundamental packages in Anaconda, can then be installed using *pip* as follows:
+Two required packages, in addition to those fundamental packages available in Anaconda, can then be installed using *pip* as follows:
 ```
 pip install tabulate
 pip install tesbml
 ```
 
 ## Getting Started
-Please refer to the example files for each of the three gene regulatory systems to get you started. For advance users who wish to append their new models into the model bank, they can refer to the model function presented in the particular system library and modify accordingly. 
+Please refer to the example files for each of the three gene regulatory systems in Examples folder to get you started. Users are required to specify the input data filename (.csv) and provide few information as requested before running the example file. For advance users who wish to append their new models into the model bank, they can refer to the model function (in the form of ordinary differential equations) presented in the particular regulatory system library and modify accordingly. 
 
 ## System Overview
 ![manuscript_figure1](https://user-images.githubusercontent.com/32381993/50499775-58e86a00-0a87-11e9-9993-5ed192d7aec2.png)
