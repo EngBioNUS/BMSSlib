@@ -28,7 +28,7 @@ BMSSlib is implemented in *Python 3.6.5* environment and can be *soon* installed
 ```
 pip install BMSSlib
 ```
-
+New users can first download and install the [Anaconda] distribution and select the Python 3.7 version based on your OS system.  
 
 __*Note*__: In view of the potential compatibility issues for the different versions of dependencies, it is highly recommended to create virtual environment of Python 3.6.5 in Anaconda. 
 ```
@@ -73,4 +73,5 @@ No license. Permission from authors is required.
    [SimpleSBML]: <https://github.com/sys-bio/simplesbml>
    [DNAplotlib]: <https://github.com/VoigtLab/dnaplotlib>
    [constrNMPy]: <https://github.com/alexblaessle/constrNMPy>
+   [Anaconda]: <https://www.anaconda.com/distribution/>
 
