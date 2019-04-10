@@ -8,9 +8,9 @@ Thank you for downloading BMSSlib! This library supports an automated Bio-Model 
 
 This package supports __*three*__ routinely used __gene regulatory systems__:
  
-- *Inducible Systems*
-- *Constitutive Systems (Single Dataset or Multiple Datasets)*
-- *Logic Gates Systems (NOT, AND, and OR gates)*
+- *Inducible System*
+- *Constitutive System (Single Dataset or Multiple Datasets)*
+- *Logic Gate System (NOT, AND, and OR gates)*
 
 ## Features
 
@@ -54,7 +54,7 @@ Please refer to the example files (Inducible, Constitutive, or logic gate system
 ### Constitutive System
 ![github_constitutivesystem](https://user-images.githubusercontent.com/32381993/50503415-d9b45f80-0aa1-11e9-9692-99b0fffde1a4.png)
 
-### Logic Gates System
+### Logic Gate System
 ![github_logicgatessystem](https://user-images.githubusercontent.com/32381993/50503680-a8d52a00-0aa3-11e9-9bab-680b900a6f4e.png)
 
 
