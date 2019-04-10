@@ -28,9 +28,9 @@ BMSSlib is implemented in *Python 3.6.5* environment and can be *soon* installed
 ```
 pip install BMSSlib
 ```
-New users can first download and install the [Anaconda Distribution] and choose the Python 3.7 version based on the Operating System (Windows, MacOS, Linux).  
+New users can first download and install the [Anaconda Distribution] and choose the Python 3.7 version based on their Operating Systems (Windows, MacOS, Linux).  
 
-__*Note*__: In view of the potential compatibility issues for the different versions of dependencies, it is highly recommended to create virtual environment of Python 3.6.5 in Anaconda. Open Anaconda Prompt (like command prompt) or Anaconda Navigator (Environments --> base (root) --> Open Terminal) to create a virtual environment as BMSSenv and then activate the environment following the commands below.    
+__*Note*__: In view of the potential compatibility issues for different versions of dependencies, it is highly recommended to create virtual environment of Python 3.6.5 in Anaconda. Open Anaconda Prompt (like command prompt) or Anaconda Navigator (Environments --> base (root) --> Open Terminal) to create a virtual environment as BMSSenv and then activate the environment following the commands below.    
 ```
 conda create -n BMSSenv python=3.6.5 anaconda
 conda activate BMSSenv
@@ -42,7 +42,7 @@ pip install tesbml
 ```
 
 ## Getting Started
-Please refer to the example files for each of the three gene regulatory systems in Examples folder to get you started. Users are required to specify the input data filename (.csv) and provide few information as requested before running the example file. For advance users who wish to append their new models into the model bank, they can refer to the model function (in the form of ordinary differential equations) presented in the particular regulatory system library and modify accordingly. 
+Please refer to the example files (Inducible, Constitutive, or logic gate system) in Examples folder to get you started. Users are required to specify the input data filename (.csv) and provide few information as requested before running the example file. For advance users who wish to append their new models into the model bank, they can refer to the model function (in the form of ordinary differential equations) presented in the particular regulatory system library and modify accordingly. 
 
 ## System Overview
 ![manuscript_figure1](https://user-images.githubusercontent.com/32381993/50499775-58e86a00-0a87-11e9-9993-5ed192d7aec2.png)
