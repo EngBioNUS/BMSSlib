@@ -44,7 +44,7 @@ pip install tesbml
 ## Getting Started
 Spyder, the Scientific Python Development Environment, is a free integrated development environment (IDE) that is included with Anaconda. It includes editing, interactive testing, debugging and introspection features. Open Spyder from your start menu or Anaconda Navigator. Refer to the [Anaconda Documentation] for more details.  
 
-To get started, please refer to the example files (Inducible, Constitutive, or logic gate system) in __*Examples*__ folder. Users are required to specify the input data filename (.csv) and provide few information as requested before running the example file. For advance users who wish to append their new models into the model bank, they can refer to the model function (in the form of ordinary differential equations) presented in the particular regulatory system library and modify accordingly. 
+To get started, please open the example files (Inducible, Constitutive, or logic gate system) from __*Examples*__ folder in Spyder. Users are required to specify the input data filename (.csv) and provide few information as requested before running the example file. The input data file should be accessible in the same folder as the example file that you need to run, or else please specify the absolute path to the data file. For advance users who wish to append their new models into the model bank, they can refer to the model function (in the form of ordinary differential equations) presented in the particular regulatory system library and modify accordingly. 
 
 ## System Overview
 ![manuscript_figure1](https://user-images.githubusercontent.com/32381993/50499775-58e86a00-0a87-11e9-9993-5ed192d7aec2.png)
