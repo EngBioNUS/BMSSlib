@@ -5,10 +5,11 @@ The following source files describe all the pre-established kinetic models for t
 - ***ConstitutivePromoterLibrary_.py***
 - ***LogicGatesLibrary_.py*** 
 
-
 __*Note__: New models can be added in these files.
 
-The three files below include the main operation functions of BMSS:
+
+
+The three files below include the main operation functions of the BMSS:
 - ***InducibleSystem_.py***
 - ***ConstitutiveSystem_.py***
 - ***LogicGatesSystem_.py***
