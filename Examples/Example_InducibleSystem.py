@@ -9,7 +9,7 @@ import sys, os
 #sys.path.append("..") # adds higher directory to python modules path.
 sys.path.append("../BMSSlibmod")
 
-from BMSSlibmod.InducibleSystem_ import InducibleSystem
+from InducibleSystem_ import InducibleSystem
 
 def main():
     

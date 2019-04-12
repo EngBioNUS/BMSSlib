@@ -24,6 +24,8 @@ import csv
 import scipy.stats as ss
 from tabulate import tabulate
 
+
+
 class LogicGatesSystem:
     def __init__(self):
         
@@ -102,50 +104,50 @@ class LogicGatesSystem:
             self.Num_Param_List.append(len(Param_NOTgate))
             self.Model_List.append('Model 1.0 - NOTgate')
         
-#            ### Model 1.1 - NOTgateKMat ###
-#            SystemType = 'NOTgateKMat'
-#            Param_NOTgateKMat, SSE_NOTgateKMat, y0_NOTgateKMat, VarName_NOTgateKMat, ParamName_NOTgateKMat, ParamUnits_NOTgateKMat\
-#                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-#        
-#            self.SSE_Combined.append(SSE_NOTgateKMat)
-#            self.ParamName_List.append(ParamName_NOTgateKMat)
-#            self.Param_List.append(Param_NOTgateKMat)
-#            self.ParamUnits_List.append(ParamUnits_NOTgateKMat)
-#            self.VarName_List.append(VarName_NOTgateKMat)
-#            self.y0_List.append(y0_NOTgateKMat)
-#            self.Num_Param_List.append(len(Param_NOTgateKMat))
-#            self.Model_List.append('Model 1.1 - NOTgateKMat')
-#        
-#        
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ### Model 1.2 - NOTgateSingle ###
-#            SystemType = 'NOTgateSingle'
-#            Param_NOTgateSingle, SSE_NOTgateSingle, y0_NOTgateSingle, VarName_NOTgateSingle, ParamName_NOTgateSingle, ParamUnits_NOTgateSingle\
-#                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-#        
-#            self.SSE_Combined.append(SSE_NOTgateSingle)
-#            self.ParamName_List.append(ParamName_NOTgateSingle)
-#            self.Param_List.append(Param_NOTgateSingle)
-#            self.ParamUnits_List.append(ParamUnits_NOTgateSingle)
-#            self.VarName_List.append(VarName_NOTgateSingle)
-#            self.y0_List.append(y0_NOTgateSingle)
-#            self.Num_Param_List.append(len(Param_NOTgateSingle))
-#            self.Model_List.append('Model 1.2 - NOTgateSingle')
-#        
-#            ### Model 1.3 - NOTgateSingleKMat ###
-#            SystemType = 'NOTgateSingleKMat'
-#            Param_NOTgateSingleKMat, SSE_NOTgateSingleKMat, y0_NOTgateSingleKMat, VarName_NOTgateSingleKMat, ParamName_NOTgateSingleKMat, ParamUnits_NOTgateSingleKMat\
-#                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-#        
-#            self.SSE_Combined.append(SSE_NOTgateSingleKMat)
-#            self.ParamName_List.append(ParamName_NOTgateSingleKMat)
-#            self.Param_List.append(Param_NOTgateSingleKMat)
-#            self.ParamUnits_List.append(ParamUnits_NOTgateSingleKMat)
-#            self.VarName_List.append(VarName_NOTgateSingleKMat)
-#            self.y0_List.append(y0_NOTgateSingleKMat)
-#            self.Num_Param_List.append(len(Param_NOTgateSingleKMat))
-#            self.Model_List.append('Model 1.3 - NOTgateSingleKMat')
+            ### Model 1.1 - NOTgateKMat ###
+            SystemType = 'NOTgateKMat'
+            Param_NOTgateKMat, SSE_NOTgateKMat, y0_NOTgateKMat, VarName_NOTgateKMat, ParamName_NOTgateKMat, ParamUnits_NOTgateKMat\
+                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+        
+            self.SSE_Combined.append(SSE_NOTgateKMat)
+            self.ParamName_List.append(ParamName_NOTgateKMat)
+            self.Param_List.append(Param_NOTgateKMat)
+            self.ParamUnits_List.append(ParamUnits_NOTgateKMat)
+            self.VarName_List.append(VarName_NOTgateKMat)
+            self.y0_List.append(y0_NOTgateKMat)
+            self.Num_Param_List.append(len(Param_NOTgateKMat))
+            self.Model_List.append('Model 1.1 - NOTgateKMat')
+        
+        
+            # -------------------------------------------------------------------------------- #
+        
+            ### Model 1.2 - NOTgateSingle ###
+            SystemType = 'NOTgateSingle'
+            Param_NOTgateSingle, SSE_NOTgateSingle, y0_NOTgateSingle, VarName_NOTgateSingle, ParamName_NOTgateSingle, ParamUnits_NOTgateSingle\
+                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+        
+            self.SSE_Combined.append(SSE_NOTgateSingle)
+            self.ParamName_List.append(ParamName_NOTgateSingle)
+            self.Param_List.append(Param_NOTgateSingle)
+            self.ParamUnits_List.append(ParamUnits_NOTgateSingle)
+            self.VarName_List.append(VarName_NOTgateSingle)
+            self.y0_List.append(y0_NOTgateSingle)
+            self.Num_Param_List.append(len(Param_NOTgateSingle))
+            self.Model_List.append('Model 1.2 - NOTgateSingle')
+        
+            ### Model 1.3 - NOTgateSingleKMat ###
+            SystemType = 'NOTgateSingleKMat'
+            Param_NOTgateSingleKMat, SSE_NOTgateSingleKMat, y0_NOTgateSingleKMat, VarName_NOTgateSingleKMat, ParamName_NOTgateSingleKMat, ParamUnits_NOTgateSingleKMat\
+                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+        
+            self.SSE_Combined.append(SSE_NOTgateSingleKMat)
+            self.ParamName_List.append(ParamName_NOTgateSingleKMat)
+            self.Param_List.append(Param_NOTgateSingleKMat)
+            self.ParamUnits_List.append(ParamUnits_NOTgateSingleKMat)
+            self.VarName_List.append(VarName_NOTgateSingleKMat)
+            self.y0_List.append(y0_NOTgateSingleKMat)
+            self.Num_Param_List.append(len(Param_NOTgateSingleKMat))
+            self.Model_List.append('Model 1.3 - NOTgateSingleKMat')
         
         
             # -------------------------------------------------------------------------------- #

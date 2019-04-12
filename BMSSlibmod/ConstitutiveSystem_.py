@@ -156,47 +156,47 @@ class ConstitutiveSystem:
             self.Num_Param_List.append(len(Param_MultiDoubleFixRBS))
             self.Model_List.append('Model 3 - MultiDoubleFixRBS')
             
-#            ### Model 3.1 - Multi Double-ODE Constitutive Promoter System (Fix RBS) with Protein Maturation Kinetics ###
-#            SystemType = 'MultiDoubleFixRBSKMat'
-#            Param_MultiDoubleFixRBSKMat, SSE_MultiDoubleFixRBSKMat, y0_MultiDoubleFixRBSKMat, VarName_MultiDoubleFixRBSKMat, ParamName_MultiDoubleFixRBSKMat, ParamUnits_MultiDoubleFixRBSKMat \
-#                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-#        
-#            self.SSE_Combined.append(SSE_MultiDoubleFixRBSKMat)
-#            self.ParamName_List.append(ParamName_MultiDoubleFixRBSKMat)
-#            self.Param_List.append(Param_MultiDoubleFixRBSKMat)
-#            self.ParamUnits_List.append(ParamUnits_MultiDoubleFixRBSKMat)
-#            self.VarName_List.append(VarName_MultiDoubleFixRBSKMat)
-#            self.y0_List.append(y0_MultiDoubleFixRBSKMat)
-#            self.Num_Param_List.append(len(Param_MultiDoubleFixRBSKMat))
-#            self.Model_List.append('Model 3.1 - MultiDoubleFixRBSKMat')
-#            
-#            ### Model 3.2 - Multi Single-ODE Constitutive Promoter System (Fix RBS) ###
-#            SystemType = 'MultiSingleFixRBS'
-#            Param_MultiSingleFixRBS, SSE_MultiSingleFixRBS, y0_MultiSingleFixRBS, VarName_MultiSingleFixRBS, ParamName_MultiSingleFixRBS, ParamUnits_MultiSingleFixRBS \
-#                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-#        
-#            self.SSE_Combined.append(SSE_MultiSingleFixRBS)
-#            self.ParamName_List.append(ParamName_MultiSingleFixRBS)
-#            self.Param_List.append(Param_MultiSingleFixRBS)
-#            self.ParamUnits_List.append(ParamUnits_MultiSingleFixRBS)
-#            self.VarName_List.append(VarName_MultiSingleFixRBS)
-#            self.y0_List.append(y0_MultiSingleFixRBS)
-#            self.Num_Param_List.append(len(Param_MultiSingleFixRBS))
-#            self.Model_List.append('Model 3.2 - MultiSingleFixRBS')
-#            
-#            ### Model 3.3 - Multi Single-ODE Constitutive Promoter System (Fix RBS) with Protein Maturation Kinetics ###
-#            SystemType = 'MultiSingleFixRBSKMat'
-#            Param_MultiSingleFixRBSKMat, SSE_MultiSingleFixRBSKMat, y0_MultiSingleFixRBSKMat, VarName_MultiSingleFixRBSKMat, ParamName_MultiSingleFixRBSKMat, ParamUnits_MultiSingleFixRBSKMat \
-#                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-#        
-#            self.SSE_Combined.append(SSE_MultiSingleFixRBSKMat)
-#            self.ParamName_List.append(ParamName_MultiSingleFixRBSKMat)
-#            self.Param_List.append(Param_MultiSingleFixRBSKMat)
-#            self.ParamUnits_List.append(ParamUnits_MultiSingleFixRBSKMat)
-#            self.VarName_List.append(VarName_MultiSingleFixRBSKMat)
-#            self.y0_List.append(y0_MultiSingleFixRBSKMat)
-#            self.Num_Param_List.append(len(Param_MultiSingleFixRBSKMat))
-#            self.Model_List.append('Model 3.3 - MultiSingleFixRBSKMat')
+            ### Model 3.1 - Multi Double-ODE Constitutive Promoter System (Fix RBS) with Protein Maturation Kinetics ###
+            SystemType = 'MultiDoubleFixRBSKMat'
+            Param_MultiDoubleFixRBSKMat, SSE_MultiDoubleFixRBSKMat, y0_MultiDoubleFixRBSKMat, VarName_MultiDoubleFixRBSKMat, ParamName_MultiDoubleFixRBSKMat, ParamUnits_MultiDoubleFixRBSKMat \
+                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+        
+            self.SSE_Combined.append(SSE_MultiDoubleFixRBSKMat)
+            self.ParamName_List.append(ParamName_MultiDoubleFixRBSKMat)
+            self.Param_List.append(Param_MultiDoubleFixRBSKMat)
+            self.ParamUnits_List.append(ParamUnits_MultiDoubleFixRBSKMat)
+            self.VarName_List.append(VarName_MultiDoubleFixRBSKMat)
+            self.y0_List.append(y0_MultiDoubleFixRBSKMat)
+            self.Num_Param_List.append(len(Param_MultiDoubleFixRBSKMat))
+            self.Model_List.append('Model 3.1 - MultiDoubleFixRBSKMat')
+            
+            ### Model 3.2 - Multi Single-ODE Constitutive Promoter System (Fix RBS) ###
+            SystemType = 'MultiSingleFixRBS'
+            Param_MultiSingleFixRBS, SSE_MultiSingleFixRBS, y0_MultiSingleFixRBS, VarName_MultiSingleFixRBS, ParamName_MultiSingleFixRBS, ParamUnits_MultiSingleFixRBS \
+                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+        
+            self.SSE_Combined.append(SSE_MultiSingleFixRBS)
+            self.ParamName_List.append(ParamName_MultiSingleFixRBS)
+            self.Param_List.append(Param_MultiSingleFixRBS)
+            self.ParamUnits_List.append(ParamUnits_MultiSingleFixRBS)
+            self.VarName_List.append(VarName_MultiSingleFixRBS)
+            self.y0_List.append(y0_MultiSingleFixRBS)
+            self.Num_Param_List.append(len(Param_MultiSingleFixRBS))
+            self.Model_List.append('Model 3.2 - MultiSingleFixRBS')
+            
+            ### Model 3.3 - Multi Single-ODE Constitutive Promoter System (Fix RBS) with Protein Maturation Kinetics ###
+            SystemType = 'MultiSingleFixRBSKMat'
+            Param_MultiSingleFixRBSKMat, SSE_MultiSingleFixRBSKMat, y0_MultiSingleFixRBSKMat, VarName_MultiSingleFixRBSKMat, ParamName_MultiSingleFixRBSKMat, ParamUnits_MultiSingleFixRBSKMat \
+                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+        
+            self.SSE_Combined.append(SSE_MultiSingleFixRBSKMat)
+            self.ParamName_List.append(ParamName_MultiSingleFixRBSKMat)
+            self.Param_List.append(Param_MultiSingleFixRBSKMat)
+            self.ParamUnits_List.append(ParamUnits_MultiSingleFixRBSKMat)
+            self.VarName_List.append(VarName_MultiSingleFixRBSKMat)
+            self.y0_List.append(y0_MultiSingleFixRBSKMat)
+            self.Num_Param_List.append(len(Param_MultiSingleFixRBSKMat))
+            self.Model_List.append('Model 3.3 - MultiSingleFixRBSKMat')
             
         #    # -------------------------------------------------------------------------------- #
         

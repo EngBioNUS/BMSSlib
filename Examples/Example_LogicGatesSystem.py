@@ -8,7 +8,7 @@ Created on Wed Dec 26 18:07:21 2018
 import sys, os
 sys.path.append("../BMSSlibmod") # adds same-level directory to python modules path.
 
-from BMSSlibmod.LogicGatesSystem_ import LogicGatesSystem
+from LogicGatesSystem_ import LogicGatesSystem
 
 def main():
     

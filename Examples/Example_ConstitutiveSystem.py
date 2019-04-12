@@ -5,20 +5,13 @@ Created on Wed Dec 26 14:16:04 2018
 @author: JingWui
 """
 
-#import sys,os
-#print(sys.path.append(os.getcwd()))
 
 import sys, os
 sys.path.append("../BMSSlibmod") # adds same-level directory to python modules path.
 
-## or add the corresponding path to the sys path as follows: 
-#sys.path.append(os.getcwd().replace('Examples', 'BMSSlibmod')) 
-
-#print(sys.path)
-#print(os.path)
 
 ### Import Class from module
-from BMSSlibmod.ConstitutiveSystem_ import ConstitutiveSystem
+from ConstitutiveSystem_ import ConstitutiveSystem
 #from ConstitutiveSystem_ import ConstitutiveSystem
 
 def main():
