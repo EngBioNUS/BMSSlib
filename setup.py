@@ -10,7 +10,7 @@ setup(
   name = 'BMSSlib',         # How you named your package folder (BMSSlib)
   packages = ['BMSSlib'],   # Chose the same as "name"
   version = '1.0',      # Start with a small number and increase it with every change you make
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+  license='Apache license 2.0',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Bio-Model Selection System',   
   author = 'Jing Wui Yeoh', 'Chueh Loo Poh',   
   author_email = 'yeohjingwui@gmail.com', 'poh.chuehloo@nus.edu.sg',      
@@ -25,7 +25,7 @@ setup(
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Science/Research',      
     'Topic :: Software Development :: Build Tools',
-    'License :: OSI Approved :: MIT License',   
+    'License :: OSI Approved :: Apache License 2.0',   
     'Programming Language :: Python :: 3.6', # 3.6.5
       ],
 )
