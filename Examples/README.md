@@ -16,4 +16,7 @@
 
 ![NOTgate_2pl_3p_2](https://user-images.githubusercontent.com/32381993/55539285-e543a200-56f2-11e9-94f6-375dfa41e3d5.png)
 
+#### <__Note__>
+- The User Input characterization data should be allocated in the given __InputData__ folder. 
+- All the output files (.txt, .xml, .csv) will be exported to the __Results__ folder provided. 
 
