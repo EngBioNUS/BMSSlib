@@ -64,7 +64,7 @@ class ConstitutiveSystem:
         Data_array_numcols = self.Data_array1.shape[1]    # Number of RFP Data Per Inducer
         self.Sample_size = (Data_array_numrows - 1) * Data_array_numcols
         
-    def RunModels(self, iteration = 1):
+    def RunModels(self, SystemOpt = 'SingleConst', iteration = 1):
         
         # -------------------------------------------------------------------------------- #
 
@@ -82,151 +82,159 @@ class ConstitutiveSystem:
         
         for loop in range(0, iteration):
             
-        #    ### Model 1 - Double-ODE Constitutive Promoter System ###
-        #    SystemType = 'ConstDouble'
-        #    Param_ConstDouble, SSE_ConstDouble, y0_ConstDouble, VarName_ConstDouble, ParamName_ConstDouble, ParamUnits_ConstDouble \
-        #        = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        #
-        #    self.SSE_Combined.append(SSE_ConstDouble)
-        #    self.ParamName_List.append(ParamName_ConstDouble)
-        #    self.Param_List.append(Param_ConstDouble)
-        #    self.ParamUnits_List.append(ParamUnits_ConstDouble)
-        #    self.VarName_List.append(VarName_ConstDouble)
-        #    self.y0_List.append(y0_ConstDouble)
-        #    self.Num_Param_List.append(len(Param_ConstDouble))
-        #    self.Model_List.append('Model 1 - ConstDouble')
-        #    
-        #    ### Model 1.1 - Double-ODE Constitutive Promoter System with Protein Maturation kinetics ###
-        #    SystemType = 'ConstDoubleKMat'
-        #    Param_ConstDoubleKMat, SSE_ConstDoubleKMat, y0_ConstDoubleKMat, VarName_ConstDoubleKMat, ParamName_ConstDoubleKMat, ParamUnits_ConstDoubleKMat \
-        #        = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        #
-        #    self.SSE_Combined.append(SSE_ConstDoubleKMat)
-        #    self.ParamName_List.append(ParamName_ConstDoubleKMat)
-        #    self.Param_List.append(Param_ConstDoubleKMat)
-        #    self.ParamUnits_List.append(ParamUnits_ConstDoubleKMat)
-        #    self.VarName_List.append(VarName_ConstDoubleKMat)
-        #    self.y0_List.append(y0_ConstDoubleKMat)
-        #    self.Num_Param_List.append(len(Param_ConstDoubleKMat))
-        #    self.Model_List.append('Model 1.1 - ConstDoubleKMat')
-        
-        #    # -------------------------------------------------------------------------------- #
-        
-#            ### Model 2 - Single-ODE Constitutive Promoter System ###
-#            SystemType = 'ConstSingle'
-#            Param_ConstSingle, SSE_ConstSingle, y0_ConstSingle, VarName_ConstSingle, ParamName_ConstSingle, ParamUnits_ConstSingle \
-#                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-#        
-#            self.SSE_Combined.append(SSE_ConstSingle)
-#            self.ParamName_List.append(ParamName_ConstSingle)
-#            self.Param_List.append(Param_ConstSingle)
-#            self.ParamUnits_List.append(ParamUnits_ConstSingle)
-#            self.VarName_List.append(VarName_ConstSingle)
-#            self.y0_List.append(y0_ConstSingle)
-#            self.Num_Param_List.append(len(Param_ConstSingle))
-#            self.Model_List.append('Model 2 - ConstSingle')
+            if (SystemOpt.casefold() == 'singleconst'):
             
-        #    ### Model 2.1 - Single-ODE Constitutive Promoter System with Protein Maturation Kinetics ###
-        #    SystemType = 'ConstSingleKMat'
-        #    Param_ConstSingleKMat, SSE_ConstSingleKMat, y0_ConstSingleKMat, VarName_ConstSingleKMat, ParamName_ConstSingleKMat, ParamUnits_ConstSingleKMat \
-        #        = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        #
-        #    self.SSE_Combined.append(SSE_ConstSingleKMat)
-        #    self.ParamName_List.append(ParamName_ConstSingleKMat)
-        #    self.Param_List.append(Param_ConstSingleKMat)
-        #    self.ParamUnits_List.append(ParamUnits_ConstSingleKMat)
-        #    self.VarName_List.append(VarName_ConstSingleKMat)
-        #    self.y0_List.append(y0_ConstSingleKMat)
-        #    self.Num_Param_List.append(len(Param_ConstSingleKMat))
-        #    self.Model_List.append('Model 2.1 - ConstSingleKMat')
+                ### Model 1 - Double-ODE Constitutive Promoter System ###
+                SystemType = 'ConstDouble'
+                Param_ConstDouble, SSE_ConstDouble, y0_ConstDouble, VarName_ConstDouble, ParamName_ConstDouble, ParamUnits_ConstDouble \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
             
-        #    # -------------------------------------------------------------------------------- #
-        
-            ### Model 3 - Multi Double-ODE Constitutive Promoter System (Fix RBS) ###
-            SystemType = 'MultiDoubleFixRBS'
-            Param_MultiDoubleFixRBS, SSE_MultiDoubleFixRBS, y0_MultiDoubleFixRBS, VarName_MultiDoubleFixRBS, ParamName_MultiDoubleFixRBS, ParamUnits_MultiDoubleFixRBS \
-                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        
-            self.SSE_Combined.append(SSE_MultiDoubleFixRBS)
-            self.ParamName_List.append(ParamName_MultiDoubleFixRBS)
-            self.Param_List.append(Param_MultiDoubleFixRBS)
-            self.ParamUnits_List.append(ParamUnits_MultiDoubleFixRBS)
-            self.VarName_List.append(VarName_MultiDoubleFixRBS)
-            self.y0_List.append(y0_MultiDoubleFixRBS)
-            self.Num_Param_List.append(len(Param_MultiDoubleFixRBS))
-            self.Model_List.append('Model 3 - MultiDoubleFixRBS')
+                self.SSE_Combined.append(SSE_ConstDouble)
+                self.ParamName_List.append(ParamName_ConstDouble)
+                self.Param_List.append(Param_ConstDouble)
+                self.ParamUnits_List.append(ParamUnits_ConstDouble)
+                self.VarName_List.append(VarName_ConstDouble)
+                self.y0_List.append(y0_ConstDouble)
+                self.Num_Param_List.append(len(Param_ConstDouble))
+                self.Model_List.append('Model 1 - ConstDouble')
+                
+                ### Model 1.1 - Double-ODE Constitutive Promoter System with Protein Maturation kinetics ###
+                SystemType = 'ConstDoubleKMat'
+                Param_ConstDoubleKMat, SSE_ConstDoubleKMat, y0_ConstDoubleKMat, VarName_ConstDoubleKMat, ParamName_ConstDoubleKMat, ParamUnits_ConstDoubleKMat \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
             
-            ### Model 3.1 - Multi Double-ODE Constitutive Promoter System (Fix RBS) with Protein Maturation Kinetics ###
-            SystemType = 'MultiDoubleFixRBSKMat'
-            Param_MultiDoubleFixRBSKMat, SSE_MultiDoubleFixRBSKMat, y0_MultiDoubleFixRBSKMat, VarName_MultiDoubleFixRBSKMat, ParamName_MultiDoubleFixRBSKMat, ParamUnits_MultiDoubleFixRBSKMat \
-                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        
-            self.SSE_Combined.append(SSE_MultiDoubleFixRBSKMat)
-            self.ParamName_List.append(ParamName_MultiDoubleFixRBSKMat)
-            self.Param_List.append(Param_MultiDoubleFixRBSKMat)
-            self.ParamUnits_List.append(ParamUnits_MultiDoubleFixRBSKMat)
-            self.VarName_List.append(VarName_MultiDoubleFixRBSKMat)
-            self.y0_List.append(y0_MultiDoubleFixRBSKMat)
-            self.Num_Param_List.append(len(Param_MultiDoubleFixRBSKMat))
-            self.Model_List.append('Model 3.1 - MultiDoubleFixRBSKMat')
+                self.SSE_Combined.append(SSE_ConstDoubleKMat)
+                self.ParamName_List.append(ParamName_ConstDoubleKMat)
+                self.Param_List.append(Param_ConstDoubleKMat)
+                self.ParamUnits_List.append(ParamUnits_ConstDoubleKMat)
+                self.VarName_List.append(VarName_ConstDoubleKMat)
+                self.y0_List.append(y0_ConstDoubleKMat)
+                self.Num_Param_List.append(len(Param_ConstDoubleKMat))
+                self.Model_List.append('Model 1.1 - ConstDoubleKMat')
             
-            ### Model 3.2 - Multi Single-ODE Constitutive Promoter System (Fix RBS) ###
-            SystemType = 'MultiSingleFixRBS'
-            Param_MultiSingleFixRBS, SSE_MultiSingleFixRBS, y0_MultiSingleFixRBS, VarName_MultiSingleFixRBS, ParamName_MultiSingleFixRBS, ParamUnits_MultiSingleFixRBS \
-                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        
-            self.SSE_Combined.append(SSE_MultiSingleFixRBS)
-            self.ParamName_List.append(ParamName_MultiSingleFixRBS)
-            self.Param_List.append(Param_MultiSingleFixRBS)
-            self.ParamUnits_List.append(ParamUnits_MultiSingleFixRBS)
-            self.VarName_List.append(VarName_MultiSingleFixRBS)
-            self.y0_List.append(y0_MultiSingleFixRBS)
-            self.Num_Param_List.append(len(Param_MultiSingleFixRBS))
-            self.Model_List.append('Model 3.2 - MultiSingleFixRBS')
+                # -------------------------------------------------------------------------------- #
             
-            ### Model 3.3 - Multi Single-ODE Constitutive Promoter System (Fix RBS) with Protein Maturation Kinetics ###
-            SystemType = 'MultiSingleFixRBSKMat'
-            Param_MultiSingleFixRBSKMat, SSE_MultiSingleFixRBSKMat, y0_MultiSingleFixRBSKMat, VarName_MultiSingleFixRBSKMat, ParamName_MultiSingleFixRBSKMat, ParamUnits_MultiSingleFixRBSKMat \
-                = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        
-            self.SSE_Combined.append(SSE_MultiSingleFixRBSKMat)
-            self.ParamName_List.append(ParamName_MultiSingleFixRBSKMat)
-            self.Param_List.append(Param_MultiSingleFixRBSKMat)
-            self.ParamUnits_List.append(ParamUnits_MultiSingleFixRBSKMat)
-            self.VarName_List.append(VarName_MultiSingleFixRBSKMat)
-            self.y0_List.append(y0_MultiSingleFixRBSKMat)
-            self.Num_Param_List.append(len(Param_MultiSingleFixRBSKMat))
-            self.Model_List.append('Model 3.3 - MultiSingleFixRBSKMat')
+                ### Model 2 - Single-ODE Constitutive Promoter System ###
+                SystemType = 'ConstSingle'
+                Param_ConstSingle, SSE_ConstSingle, y0_ConstSingle, VarName_ConstSingle, ParamName_ConstSingle, ParamUnits_ConstSingle \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
             
-        #    # -------------------------------------------------------------------------------- #
+                self.SSE_Combined.append(SSE_ConstSingle)
+                self.ParamName_List.append(ParamName_ConstSingle)
+                self.Param_List.append(Param_ConstSingle)
+                self.ParamUnits_List.append(ParamUnits_ConstSingle)
+                self.VarName_List.append(VarName_ConstSingle)
+                self.y0_List.append(y0_ConstSingle)
+                self.Num_Param_List.append(len(Param_ConstSingle))
+                self.Model_List.append('Model 2 - ConstSingle')
+                
+                ### Model 2.1 - Single-ODE Constitutive Promoter System with Protein Maturation Kinetics ###
+                SystemType = 'ConstSingleKMat'
+                Param_ConstSingleKMat, SSE_ConstSingleKMat, y0_ConstSingleKMat, VarName_ConstSingleKMat, ParamName_ConstSingleKMat, ParamUnits_ConstSingleKMat \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+            
+                self.SSE_Combined.append(SSE_ConstSingleKMat)
+                self.ParamName_List.append(ParamName_ConstSingleKMat)
+                self.Param_List.append(Param_ConstSingleKMat)
+                self.ParamUnits_List.append(ParamUnits_ConstSingleKMat)
+                self.VarName_List.append(VarName_ConstSingleKMat)
+                self.y0_List.append(y0_ConstSingleKMat)
+                self.Num_Param_List.append(len(Param_ConstSingleKMat))
+                self.Model_List.append('Model 2.1 - ConstSingleKMat')
+                
+                # -------------------------------------------------------------------------------- #
+            elif (SystemOpt.casefold() == 'multifixedrbs'):
+                
+                ### Model 3 - Multi Double-ODE Constitutive Promoter System (Fix RBS) ###
+                SystemType = 'MultiDoubleFixRBS'
+                Param_MultiDoubleFixRBS, SSE_MultiDoubleFixRBS, y0_MultiDoubleFixRBS, VarName_MultiDoubleFixRBS, ParamName_MultiDoubleFixRBS, ParamUnits_MultiDoubleFixRBS \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+            
+                self.SSE_Combined.append(SSE_MultiDoubleFixRBS)
+                self.ParamName_List.append(ParamName_MultiDoubleFixRBS)
+                self.Param_List.append(Param_MultiDoubleFixRBS)
+                self.ParamUnits_List.append(ParamUnits_MultiDoubleFixRBS)
+                self.VarName_List.append(VarName_MultiDoubleFixRBS)
+                self.y0_List.append(y0_MultiDoubleFixRBS)
+                self.Num_Param_List.append(len(Param_MultiDoubleFixRBS))
+                self.Model_List.append('Model 3 - MultiDoubleFixRBS')
+                
+                ### Model 3.1 - Multi Double-ODE Constitutive Promoter System (Fix RBS) with Protein Maturation Kinetics ###
+                SystemType = 'MultiDoubleFixRBSKMat'
+                Param_MultiDoubleFixRBSKMat, SSE_MultiDoubleFixRBSKMat, y0_MultiDoubleFixRBSKMat, VarName_MultiDoubleFixRBSKMat, ParamName_MultiDoubleFixRBSKMat, ParamUnits_MultiDoubleFixRBSKMat \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+            
+                self.SSE_Combined.append(SSE_MultiDoubleFixRBSKMat)
+                self.ParamName_List.append(ParamName_MultiDoubleFixRBSKMat)
+                self.Param_List.append(Param_MultiDoubleFixRBSKMat)
+                self.ParamUnits_List.append(ParamUnits_MultiDoubleFixRBSKMat)
+                self.VarName_List.append(VarName_MultiDoubleFixRBSKMat)
+                self.y0_List.append(y0_MultiDoubleFixRBSKMat)
+                self.Num_Param_List.append(len(Param_MultiDoubleFixRBSKMat))
+                self.Model_List.append('Model 3.1 - MultiDoubleFixRBSKMat')
+                
+                ### Model 3.2 - Multi Single-ODE Constitutive Promoter System (Fix RBS) ###
+                SystemType = 'MultiSingleFixRBS'
+                Param_MultiSingleFixRBS, SSE_MultiSingleFixRBS, y0_MultiSingleFixRBS, VarName_MultiSingleFixRBS, ParamName_MultiSingleFixRBS, ParamUnits_MultiSingleFixRBS \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+            
+                self.SSE_Combined.append(SSE_MultiSingleFixRBS)
+                self.ParamName_List.append(ParamName_MultiSingleFixRBS)
+                self.Param_List.append(Param_MultiSingleFixRBS)
+                self.ParamUnits_List.append(ParamUnits_MultiSingleFixRBS)
+                self.VarName_List.append(VarName_MultiSingleFixRBS)
+                self.y0_List.append(y0_MultiSingleFixRBS)
+                self.Num_Param_List.append(len(Param_MultiSingleFixRBS))
+                self.Model_List.append('Model 3.2 - MultiSingleFixRBS')
+                
+                ### Model 3.3 - Multi Single-ODE Constitutive Promoter System (Fix RBS) with Protein Maturation Kinetics ###
+                SystemType = 'MultiSingleFixRBSKMat'
+                Param_MultiSingleFixRBSKMat, SSE_MultiSingleFixRBSKMat, y0_MultiSingleFixRBSKMat, VarName_MultiSingleFixRBSKMat, ParamName_MultiSingleFixRBSKMat, ParamUnits_MultiSingleFixRBSKMat \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+            
+                self.SSE_Combined.append(SSE_MultiSingleFixRBSKMat)
+                self.ParamName_List.append(ParamName_MultiSingleFixRBSKMat)
+                self.Param_List.append(Param_MultiSingleFixRBSKMat)
+                self.ParamUnits_List.append(ParamUnits_MultiSingleFixRBSKMat)
+                self.VarName_List.append(VarName_MultiSingleFixRBSKMat)
+                self.y0_List.append(y0_MultiSingleFixRBSKMat)
+                self.Num_Param_List.append(len(Param_MultiSingleFixRBSKMat))
+                self.Model_List.append('Model 3.3 - MultiSingleFixRBSKMat')
+                
+                # -------------------------------------------------------------------------------- #
+            elif (SystemOpt.casefold() == 'multifixedpromoter'):
+            
+                ### Model 4 - Multi Double-ODE Constitutive Promoter System (Fix Promoter) ###
+                SystemType = 'MultiDoubleFixPromoter'
+                Param_MultiDoubleFixPromoter, SSE_MultiDoubleFixPromoter, y0_MultiDoubleFixPromoter, VarName_MultiDoubleFixPromoter, ParamName_MultiDoubleFixPromoter, ParamUnits_MultiDoubleFixPromoter \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+            
+                self.SSE_Combined.append(SSE_MultiDoubleFixPromoter)
+                self.ParamName_List.append(ParamName_MultiDoubleFixPromoter)
+                self.Param_List.append(Param_MultiDoubleFixPromoter)
+                self.ParamUnits_List.append(ParamUnits_MultiDoubleFixPromoter)
+                self.VarName_List.append(VarName_MultiDoubleFixPromoter)
+                self.y0_List.append(y0_MultiDoubleFixPromoter)
+                self.Num_Param_List.append(len(Param_MultiDoubleFixPromoter))
+                self.Model_List.append('Model 4 - MultiDoubleFixPromoter')
+                
+                ### Model 4.1 - Multi Double-ODE Constitutive Promoter System (Fix Promoter) ###
+                SystemType = 'MultiDoubleFixPromoterKMat'
+                Param_MultiDoubleFixPromoterKMat, SSE_MultiDoubleFixPromoterKMat, y0_MultiDoubleFixPromoterKMat, VarName_MultiDoubleFixPromoterKMat, ParamName_MultiDoubleFixPromoterKMat, ParamUnits_MultiDoubleFixPromoterKMat \
+                    = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
+            
+                self.SSE_Combined.append(SSE_MultiDoubleFixPromoterKMat)
+                self.ParamName_List.append(ParamName_MultiDoubleFixPromoterKMat)
+                self.Param_List.append(Param_MultiDoubleFixPromoterKMat)
+                self.ParamUnits_List.append(ParamUnits_MultiDoubleFixPromoterKMat)
+                self.VarName_List.append(VarName_MultiDoubleFixPromoterKMat)
+                self.y0_List.append(y0_MultiDoubleFixPromoterKMat)
+                self.Num_Param_List.append(len(Param_MultiDoubleFixPromoterKMat))
+                self.Model_List.append('Model 4.1 - MultiDoubleFixPromoterKMat')
+                
+            else: 
+                print('Error in the selected System Option')
         
-        #    ### Model 4 - Multi Double-ODE Constitutive Promoter System (Fix Promoter) ###
-        #    SystemType = 'MultiDoubleFixPromoter'
-        #    Param_MultiDoubleFixPromoter, SSE_MultiDoubleFixPromoter, y0_MultiDoubleFixPromoter, VarName_MultiDoubleFixPromoter, ParamName_MultiDoubleFixPromoter, ParamUnits_MultiDoubleFixPromoter \
-        #        = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        #
-        #    self.SSE_Combined.append(SSE_MultiDoubleFixPromoter)
-        #    self.ParamName_List.append(ParamName_MultiDoubleFixPromoter)
-        #    self.Param_List.append(Param_MultiDoubleFixPromoter)
-        #    self.ParamUnits_List.append(ParamUnits_MultiDoubleFixPromoter)
-        #    self.VarName_List.append(VarName_MultiDoubleFixPromoter)
-        #    self.y0_List.append(y0_MultiDoubleFixPromoter)
-        #    self.Num_Param_List.append(len(Param_MultiDoubleFixPromoter))
-        #    self.Model_List.append('Model 4 - MultiDoubleFixPromoter')
-        #    
-        #    ### Model 4.1 - Multi Double-ODE Constitutive Promoter System (Fix Promoter) ###
-        #    SystemType = 'MultiDoubleFixPromoterKMat'
-        #    Param_MultiDoubleFixPromoterKMat, SSE_MultiDoubleFixPromoterKMat, y0_MultiDoubleFixPromoterKMat, VarName_MultiDoubleFixPromoterKMat, ParamName_MultiDoubleFixPromoterKMat, ParamUnits_MultiDoubleFixPromoterKMat \
-        #        = self.ConstPLib1.Run_ConstitutiveSystem(SystemType, self.Data_header1, self.Data_array1, self.NumDataSet_)
-        #
-        #    self.SSE_Combined.append(SSE_MultiDoubleFixPromoterKMat)
-        #    self.ParamName_List.append(ParamName_MultiDoubleFixPromoterKMat)
-        #    self.Param_List.append(Param_MultiDoubleFixPromoterKMat)
-        #    self.ParamUnits_List.append(ParamUnits_MultiDoubleFixPromoterKMat)
-        #    self.VarName_List.append(VarName_MultiDoubleFixPromoterKMat)
-        #    self.y0_List.append(y0_MultiDoubleFixPromoterKMat)
-        #    self.Num_Param_List.append(len(Param_MultiDoubleFixPromoterKMat))
-        #    self.Model_List.append('Model 4.1 - MultiDoubleFixPromoterKMat')
         
     def RunModelSelection(self):
         
@@ -322,9 +330,36 @@ class ConstitutiveSystem:
         
         ### create a table with (Model, SSE, AIC, Rank)
         TableData = []
-        Header = ["Model", "SSE", "AIC", "Rank"]
+        Header = ["Model", "SSE", "AIC", "\u0394AIC", "Evidence", "Rank"]
+        
+        i = 0
+        dAIC = []
+        Evidence = []
+        for x in self.AIC_Results:
+            dAIC.append(x - self.min_AIC)
+            if (dAIC[i] == 0):
+                Evidence.append('-')
+            elif (dAIC[i] > 0) and (dAIC[i] <= 2):
+                Evidence.append('Substantial Support')
+            elif (dAIC[i] > 10):
+                Evidence.append('No Support')
+            else:
+                Evidence.append('Weak Support')
+            i += 1
+
+            
+#        #decide if the model with rank 1 is a better model with confidence
+#        Rank_ = [int(x) for x in Rank]
+#        BestEvidence = Evidence[Rank_.index(2)]
+        
+        if 'Substantial Support' in Evidence:
+            Count = Evidence.count('Substantial Support')
+            BestEvidence = 'low confidence. There are ' + str(Count) + 'other comparably good models'
+        else:
+            BestEvidence = 'confidence'
+        
         for i in range(0, len(self.Model_List)):
-            TableData.append([str(self.Model_List[i]), str(self.SSE_Combined[i]), str(self.AIC_Results[i]), str(int(Rank[i]))])
+            TableData.append([str(self.Model_List[i]), str(self.SSE_Combined[i]), str(self.AIC_Results[i]), str(dAIC[i]), Evidence[i], str(int(Rank[i]))])
         Table = tabulate(TableData, Header, tablefmt='orgtbl')
         print(Table)
         
@@ -332,14 +367,18 @@ class ConstitutiveSystem:
         Txtfilename1, DateTimenow = Txtfilename.gettxtfilename()
         print('\nText File Generated:', Txtfilename)
         
-        f = open(Txtfilename1,"a+")
+        #f = open(Txtfilename1,"a+")
+        Txtpath = "Results\\" + Txtfilename1
+        
+        f = open(Txtpath,encoding = 'utf-8', mode ="a+")
+        
         f.write('Input File name: '+self.Input_filename_+'\n')
         f.write('\n')
         f.write('Models Tested: '+str(self.Model_List)+'\n')
         f.write('\n')
         f.write(str(Table))
         f.write('\n')
-        f.write('Recommended Model: '+self.Best_Model+'\n')
+        f.write('Recommended Model: '+self.Best_Model + ' with ' + BestEvidence + '\n')
         f.write('\n')
         f.write('Optimized Parameters:\n')
         
@@ -409,13 +448,15 @@ class ConstitutiveSystem:
         ### To export Model Data in CSV file
         ExportDataFile = input("Please insert 'yes/no' to export Model data file):")
     
-        while not ((ExportDataFile == 'yes') or (ExportDataFile == 'no')):
+        while not ((ExportDataFile.casefold() == 'yes') or (ExportDataFile.casefold() == 'no')):
              ExportDataFile = input("Error: Incorrect Choice! Please insert either yes or no only:\n")
     
-        if ExportDataFile == 'yes':
-            CSVfileName = Txtfilename.getcsvfilename()
+        if ExportDataFile.casefold() == 'yes':
+            self.CSVfileName = Txtfilename.getcsvfilename()
             VariableMatrixData = self.VariableMatrix[-1][:,:].tolist()
-            with open(CSVfileName, 'w', newline='') as csvfile:
+            
+            CSVfilePath = "Results/" + self.CSVfileName
+            with open(CSVfilePath, 'w', newline='') as csvfile:
                 CF = csv.writer(csvfile, delimiter=',')
                 CF.writerow(['Time(min)'] + self.DataLegend)
                 for i in range(0, len(self.Time)):
@@ -571,10 +612,10 @@ class ConstitutiveSystem:
     # Helper function to simplify the whole process   
     ####################################################################
          
-    def AutoRunConstitutiveSystem(self, Input_filename, NumDataSet):
+    def AutoRunConstitutiveSystem(self, Inputfile, SystemOpt, NumDataSet):
         
-        self.DataReader(Input_filename, NumDataSet)
-        self.RunModels()
+        self.DataReader(Inputfile, NumDataSet)
+        self.RunModels(SystemOpt)
         self.RunModelSelection()
         self.CreateOutputTextFile()
         self.ExportModelDataFile()

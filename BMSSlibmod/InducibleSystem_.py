@@ -132,177 +132,177 @@ class InducibleSystem:
             self.Num_Param_List.append(len(Param_ConstantInducerKMat))
             self.Model_List.append('Model 1.1 - ConstantInducerKMat')
             
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ### Model 2 - Inducer Degradation ###
-#            SystemType = 'DegradationInducer'
-#            Param_DegradationInducer, SSE_DegradationInducer, y0_DegradationInducer, VarName_DegradationInducer, ParamName_DegradationInducer, ParamUnits_DegradationInducer \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_DegradationInducer)
-#            self.ParamName_List.append(ParamName_DegradationInducer)
-#            self.Param_List.append(Param_DegradationInducer)
-#            self.ParamUnits_List.append(ParamUnits_DegradationInducer)
-#            self.VarName_List.append(VarName_DegradationInducer)
-#            self.y0_List.append(y0_DegradationInducer)
-#            self.Num_Param_List.append(len(Param_DegradationInducer))
-#            self.Model_List.append('Model 2 - DegradationInducer')
-#            
-#            ### Model 2.1 - Inducer Degradation with Protein Maturation Kinetics ###
-#            SystemType = 'DegradationInducerKMat'
-#            Param_DegradationInducerKMat, SSE_DegradationInducerKMat, y0_DegradationInducerKMat, VarName_DegradationInducerKMat, ParamName_DegradationInducerKMat, ParamUnits_DegradationInducerKMat \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_DegradationInducerKMat)
-#            self.ParamName_List.append(ParamName_DegradationInducerKMat)
-#            self.Param_List.append(Param_DegradationInducerKMat)
-#            self.ParamUnits_List.append(ParamUnits_DegradationInducerKMat)
-#            self.VarName_List.append(VarName_DegradationInducerKMat)
-#            self.y0_List.append(y0_DegradationInducerKMat)
-#            self.Num_Param_List.append(len(Param_DegradationInducerKMat))
-#            self.Model_List.append('Model 2.1 - DegradationInducerKMat')
-#        
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ### Model 3 - Inducer Transport Delay ###
-#            SystemType = 'DelayInducer'
-#            Param_DelayInducer, SSE_DelayInducer, y0_DelayInducer, VarName_DelayInducer, ParamName_DelayInducer, ParamUnits_DelayInducer \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_DelayInducer)
-#            self.ParamName_List.append(ParamName_DelayInducer)
-#            self.Param_List.append(Param_DelayInducer)
-#            self.ParamUnits_List.append(ParamUnits_DelayInducer)
-#            self.VarName_List.append(VarName_DelayInducer)
-#            self.y0_List.append(y0_DelayInducer)
-#            self.Num_Param_List.append(len(Param_DelayInducer))
-#            self.Model_List.append('Model 3 - DelayInducer')
-#            
-#            ### Model 3.1 - Inducer Transport Delay with Protein Maturation Kinetics ###
-#            SystemType = 'DelayInducerKMat'
-#            Param_DelayInducerKMat, SSE_DelayInducerKMat, y0_DelayInducerKMat, VarName_DelayInducerKMat, ParamName_DelayInducerKMat, ParamUnits_DelayInducerKMat \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_DelayInducerKMat)
-#            self.ParamName_List.append(ParamName_DelayInducerKMat)
-#            self.Param_List.append(Param_DelayInducerKMat)
-#            self.ParamUnits_List.append(ParamUnits_DelayInducerKMat)
-#            self.VarName_List.append(VarName_DelayInducerKMat)
-#            self.y0_List.append(y0_DelayInducerKMat)
-#            self.Num_Param_List.append(len(Param_DelayInducerKMat))
-#            self.Model_List.append('Model 3.1 - DelayInducerKMat')
-#        
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ## Model 4 - Single-ODE Constant Inducer ###
-#            SystemType = 'SingleConstantInducer'
-#            Param_SingleConstantInducer, SSE_SingleConstantInducer, y0_SingleConstantInducer, VarName_SingleConstantInducer, ParamName_SingleConstantInducer, ParamUnits_SingleConstantInducer \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_SingleConstantInducer)
-#            self.ParamName_List.append(ParamName_SingleConstantInducer)
-#            self.Param_List.append(Param_SingleConstantInducer)
-#            self.ParamUnits_List.append(ParamUnits_SingleConstantInducer)
-#            self.VarName_List.append(VarName_SingleConstantInducer)
-#            self.y0_List.append(y0_SingleConstantInducer)
-#            self.Num_Param_List.append(len(Param_SingleConstantInducer))
-#            self.Model_List.append('Model 4 - SingleConstantInducer')
-#        
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ### Model 5 - Single-ODE Inducer Degradation ###
-#            SystemType = 'SingleDegradationInducer'
-#            Param_SingleDegradationInducer, SSE_SingleDegradationInducer, y0_SingleDegradationInducer, VarName_SingleDegradationInducer, ParamName_SingleDegradationInducer, ParamUnits_SingleDegradationInducer \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_SingleDegradationInducer)
-#            self.ParamName_List.append(ParamName_SingleDegradationInducer)
-#            self.Param_List.append(Param_SingleDegradationInducer)
-#            self.ParamUnits_List.append(ParamUnits_SingleDegradationInducer)
-#            self.VarName_List.append(VarName_SingleDegradationInducer)
-#            self.y0_List.append(y0_SingleDegradationInducer)
-#            self.Num_Param_List.append(len(Param_SingleDegradationInducer))
-#            self.Model_List.append('Model 5 - SingleDegradationInducer')
-#        
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ## Model 6 - Single-ODE Inducer Transport Delay ###
-#            SystemType = 'SingleDelayInducer'
-#            Param_SingleDelayInducer, SSE_SingleDelayInducer, y0_SingleDelayInducer, VarName_SingleDelayInducer, ParamName_SingleDelayInducer, ParamUnits_SingleDelayInducer \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_SingleDelayInducer)
-#            self.ParamName_List.append(ParamName_SingleDelayInducer)
-#            self.Param_List.append(Param_SingleDelayInducer)
-#            self.ParamUnits_List.append(ParamUnits_SingleDelayInducer)
-#            self.VarName_List.append(VarName_SingleDelayInducer)
-#            self.y0_List.append(y0_SingleDelayInducer)
-#            self.Num_Param_List.append(len(Param_SingleDelayInducer))
-#            self.Model_List.append('Model 6 - SingleDelayInducer')
-#        
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ## Model 7 - Inducer Delay with Degradation ###
-#            SystemType = 'DelayDegradationInducer'
-#            Param_DelayDegradationInducer, SSE_DelayDegradationInducer, y0_DelayDegradationInducer, VarName_DelayDegradationInducer, ParamName_DelayDegradationInducer, ParamUnits_DelayDegradationInducer \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_DelayDegradationInducer)
-#            self.ParamName_List.append(ParamName_DelayDegradationInducer)
-#            self.Param_List.append(Param_DelayDegradationInducer)
-#            self.ParamUnits_List.append(ParamUnits_DelayDegradationInducer)
-#            self.VarName_List.append(VarName_DelayDegradationInducer)
-#            self.y0_List.append(y0_DelayDegradationInducer)
-#            self.Num_Param_List.append(len(Param_DelayDegradationInducer))
-#            self.Model_List.append('Model 7 - DelayDegradationInducer')
-#            
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ## Model 8 - Inducer Degradation with Delay ###
-#            SystemType = 'DegradationDelayInducer'
-#            Param_DegradationDelayInducer, SSE_DegradationDelayInducer, y0_DegradationDelayInducer, VarName_DegradationDelayInducer, ParamName_DegradationDelayInducer, ParamUnits_DegradationDelayInducer \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_DegradationDelayInducer)
-#            self.ParamName_List.append(ParamName_DegradationDelayInducer)
-#            self.Param_List.append(Param_DegradationDelayInducer)
-#            self.ParamUnits_List.append(ParamUnits_DegradationDelayInducer)
-#            self.VarName_List.append(VarName_DegradationDelayInducer)
-#            self.y0_List.append(y0_DegradationDelayInducer)
-#            self.Num_Param_List.append(len(Param_DegradationDelayInducer))
-#            self.Model_List.append('Model 8 - DegradationDelayInducer')
-#            
-#            # -------------------------------------------------------------------------------- #
-#        
-#            ## Model 9 - Inducer Inhibition at High Concentration ###
-#            SystemType = 'ConstantIndInhibition'
-#            Param_ConstantIndInhibition, SSE_ConstantIndInhibition, y0_ConstantIndInhibition, VarName_ConstantIndInhibition, ParamName_ConstantIndInhibition, ParamUnits_ConstantIndInhibition \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_ConstantIndInhibition)
-#            self.ParamName_List.append(ParamName_ConstantIndInhibition)
-#            self.Param_List.append(Param_ConstantIndInhibition)
-#            self.ParamUnits_List.append(ParamUnits_ConstantIndInhibition)
-#            self.VarName_List.append(VarName_ConstantIndInhibition)
-#            self.y0_List.append(y0_ConstantIndInhibition)
-#            self.Num_Param_List.append(len(Param_ConstantIndInhibition))
-#            self.Model_List.append('Model 9.0 - ConstantIndInhibition')
-#            
-#            ## Model 9.1 - Inducer with Delay response and Inhibition at High Concentration ###
-#            SystemType = 'DelayIndInhibition'
-#            Param_DelayIndInhibition, SSE_DelayIndInhibition, y0_DelayIndInhibition, VarName_DelayIndInhibition, ParamName_DelayIndInhibition, ParamUnits_DelayIndInhibition \
-#                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
-#        
-#            self.SSE_Combined.append(SSE_DelayIndInhibition)
-#            self.ParamName_List.append(ParamName_DelayIndInhibition)
-#            self.Param_List.append(Param_DelayIndInhibition)
-#            self.ParamUnits_List.append(ParamUnits_DelayIndInhibition)
-#            self.VarName_List.append(VarName_DelayIndInhibition)
-#            self.y0_List.append(y0_DelayIndInhibition)
-#            self.Num_Param_List.append(len(Param_DelayIndInhibition))
-#            self.Model_List.append('Model 9.1 - DelayIndInhibition')
+            # -------------------------------------------------------------------------------- #
         
-        #    # -------------------------------------------------------------------------------- #
+            ### Model 2 - Inducer Degradation ###
+            SystemType = 'DegradationInducer'
+            Param_DegradationInducer, SSE_DegradationInducer, y0_DegradationInducer, VarName_DegradationInducer, ParamName_DegradationInducer, ParamUnits_DegradationInducer \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_DegradationInducer)
+            self.ParamName_List.append(ParamName_DegradationInducer)
+            self.Param_List.append(Param_DegradationInducer)
+            self.ParamUnits_List.append(ParamUnits_DegradationInducer)
+            self.VarName_List.append(VarName_DegradationInducer)
+            self.y0_List.append(y0_DegradationInducer)
+            self.Num_Param_List.append(len(Param_DegradationInducer))
+            self.Model_List.append('Model 2 - DegradationInducer')
+            
+            ### Model 2.1 - Inducer Degradation with Protein Maturation Kinetics ###
+            SystemType = 'DegradationInducerKMat'
+            Param_DegradationInducerKMat, SSE_DegradationInducerKMat, y0_DegradationInducerKMat, VarName_DegradationInducerKMat, ParamName_DegradationInducerKMat, ParamUnits_DegradationInducerKMat \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_DegradationInducerKMat)
+            self.ParamName_List.append(ParamName_DegradationInducerKMat)
+            self.Param_List.append(Param_DegradationInducerKMat)
+            self.ParamUnits_List.append(ParamUnits_DegradationInducerKMat)
+            self.VarName_List.append(VarName_DegradationInducerKMat)
+            self.y0_List.append(y0_DegradationInducerKMat)
+            self.Num_Param_List.append(len(Param_DegradationInducerKMat))
+            self.Model_List.append('Model 2.1 - DegradationInducerKMat')
+        
+            # -------------------------------------------------------------------------------- #
+        
+            ### Model 3 - Inducer Transport Delay ###
+            SystemType = 'DelayInducer'
+            Param_DelayInducer, SSE_DelayInducer, y0_DelayInducer, VarName_DelayInducer, ParamName_DelayInducer, ParamUnits_DelayInducer \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_DelayInducer)
+            self.ParamName_List.append(ParamName_DelayInducer)
+            self.Param_List.append(Param_DelayInducer)
+            self.ParamUnits_List.append(ParamUnits_DelayInducer)
+            self.VarName_List.append(VarName_DelayInducer)
+            self.y0_List.append(y0_DelayInducer)
+            self.Num_Param_List.append(len(Param_DelayInducer))
+            self.Model_List.append('Model 3 - DelayInducer')
+            
+            ### Model 3.1 - Inducer Transport Delay with Protein Maturation Kinetics ###
+            SystemType = 'DelayInducerKMat'
+            Param_DelayInducerKMat, SSE_DelayInducerKMat, y0_DelayInducerKMat, VarName_DelayInducerKMat, ParamName_DelayInducerKMat, ParamUnits_DelayInducerKMat \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_DelayInducerKMat)
+            self.ParamName_List.append(ParamName_DelayInducerKMat)
+            self.Param_List.append(Param_DelayInducerKMat)
+            self.ParamUnits_List.append(ParamUnits_DelayInducerKMat)
+            self.VarName_List.append(VarName_DelayInducerKMat)
+            self.y0_List.append(y0_DelayInducerKMat)
+            self.Num_Param_List.append(len(Param_DelayInducerKMat))
+            self.Model_List.append('Model 3.1 - DelayInducerKMat')
+        
+            # -------------------------------------------------------------------------------- #
+        
+            ## Model 4 - Single-ODE Constant Inducer ###
+            SystemType = 'SingleConstantInducer'
+            Param_SingleConstantInducer, SSE_SingleConstantInducer, y0_SingleConstantInducer, VarName_SingleConstantInducer, ParamName_SingleConstantInducer, ParamUnits_SingleConstantInducer \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_SingleConstantInducer)
+            self.ParamName_List.append(ParamName_SingleConstantInducer)
+            self.Param_List.append(Param_SingleConstantInducer)
+            self.ParamUnits_List.append(ParamUnits_SingleConstantInducer)
+            self.VarName_List.append(VarName_SingleConstantInducer)
+            self.y0_List.append(y0_SingleConstantInducer)
+            self.Num_Param_List.append(len(Param_SingleConstantInducer))
+            self.Model_List.append('Model 4 - SingleConstantInducer')
+        
+            # -------------------------------------------------------------------------------- #
+        
+            ### Model 5 - Single-ODE Inducer Degradation ###
+            SystemType = 'SingleDegradationInducer'
+            Param_SingleDegradationInducer, SSE_SingleDegradationInducer, y0_SingleDegradationInducer, VarName_SingleDegradationInducer, ParamName_SingleDegradationInducer, ParamUnits_SingleDegradationInducer \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_SingleDegradationInducer)
+            self.ParamName_List.append(ParamName_SingleDegradationInducer)
+            self.Param_List.append(Param_SingleDegradationInducer)
+            self.ParamUnits_List.append(ParamUnits_SingleDegradationInducer)
+            self.VarName_List.append(VarName_SingleDegradationInducer)
+            self.y0_List.append(y0_SingleDegradationInducer)
+            self.Num_Param_List.append(len(Param_SingleDegradationInducer))
+            self.Model_List.append('Model 5 - SingleDegradationInducer')
+        
+            # -------------------------------------------------------------------------------- #
+        
+            ## Model 6 - Single-ODE Inducer Transport Delay ###
+            SystemType = 'SingleDelayInducer'
+            Param_SingleDelayInducer, SSE_SingleDelayInducer, y0_SingleDelayInducer, VarName_SingleDelayInducer, ParamName_SingleDelayInducer, ParamUnits_SingleDelayInducer \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_SingleDelayInducer)
+            self.ParamName_List.append(ParamName_SingleDelayInducer)
+            self.Param_List.append(Param_SingleDelayInducer)
+            self.ParamUnits_List.append(ParamUnits_SingleDelayInducer)
+            self.VarName_List.append(VarName_SingleDelayInducer)
+            self.y0_List.append(y0_SingleDelayInducer)
+            self.Num_Param_List.append(len(Param_SingleDelayInducer))
+            self.Model_List.append('Model 6 - SingleDelayInducer')
+        
+            # -------------------------------------------------------------------------------- #
+        
+            ## Model 7 - Inducer Delay with Degradation ###
+            SystemType = 'DelayDegradationInducer'
+            Param_DelayDegradationInducer, SSE_DelayDegradationInducer, y0_DelayDegradationInducer, VarName_DelayDegradationInducer, ParamName_DelayDegradationInducer, ParamUnits_DelayDegradationInducer \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_DelayDegradationInducer)
+            self.ParamName_List.append(ParamName_DelayDegradationInducer)
+            self.Param_List.append(Param_DelayDegradationInducer)
+            self.ParamUnits_List.append(ParamUnits_DelayDegradationInducer)
+            self.VarName_List.append(VarName_DelayDegradationInducer)
+            self.y0_List.append(y0_DelayDegradationInducer)
+            self.Num_Param_List.append(len(Param_DelayDegradationInducer))
+            self.Model_List.append('Model 7 - DelayDegradationInducer')
+            
+            # -------------------------------------------------------------------------------- #
+        
+            ## Model 8 - Inducer Degradation with Delay ###
+            SystemType = 'DegradationDelayInducer'
+            Param_DegradationDelayInducer, SSE_DegradationDelayInducer, y0_DegradationDelayInducer, VarName_DegradationDelayInducer, ParamName_DegradationDelayInducer, ParamUnits_DegradationDelayInducer \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_DegradationDelayInducer)
+            self.ParamName_List.append(ParamName_DegradationDelayInducer)
+            self.Param_List.append(Param_DegradationDelayInducer)
+            self.ParamUnits_List.append(ParamUnits_DegradationDelayInducer)
+            self.VarName_List.append(VarName_DegradationDelayInducer)
+            self.y0_List.append(y0_DegradationDelayInducer)
+            self.Num_Param_List.append(len(Param_DegradationDelayInducer))
+            self.Model_List.append('Model 8 - DegradationDelayInducer')
+            
+            # -------------------------------------------------------------------------------- #
+        
+            ## Model 9 - Inducer Inhibition at High Concentration ###
+            SystemType = 'ConstantIndInhibition'
+            Param_ConstantIndInhibition, SSE_ConstantIndInhibition, y0_ConstantIndInhibition, VarName_ConstantIndInhibition, ParamName_ConstantIndInhibition, ParamUnits_ConstantIndInhibition \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_ConstantIndInhibition)
+            self.ParamName_List.append(ParamName_ConstantIndInhibition)
+            self.Param_List.append(Param_ConstantIndInhibition)
+            self.ParamUnits_List.append(ParamUnits_ConstantIndInhibition)
+            self.VarName_List.append(VarName_ConstantIndInhibition)
+            self.y0_List.append(y0_ConstantIndInhibition)
+            self.Num_Param_List.append(len(Param_ConstantIndInhibition))
+            self.Model_List.append('Model 9.0 - ConstantIndInhibition')
+            
+            ## Model 9.1 - Inducer with Delay response and Inhibition at High Concentration ###
+            SystemType = 'DelayIndInhibition'
+            Param_DelayIndInhibition, SSE_DelayIndInhibition, y0_DelayIndInhibition, VarName_DelayIndInhibition, ParamName_DelayIndInhibition, ParamUnits_DelayIndInhibition \
+                = self.IndPLib1.Run_InducibleSystem(SystemType, self.n_DoseRes, self.K_ind_DoseRes, self.Data_header1, self.Data_array1, self.Inducer1, self.Inducer_log1)
+        
+            self.SSE_Combined.append(SSE_DelayIndInhibition)
+            self.ParamName_List.append(ParamName_DelayIndInhibition)
+            self.Param_List.append(Param_DelayIndInhibition)
+            self.ParamUnits_List.append(ParamUnits_DelayIndInhibition)
+            self.VarName_List.append(VarName_DelayIndInhibition)
+            self.y0_List.append(y0_DelayIndInhibition)
+            self.Num_Param_List.append(len(Param_DelayIndInhibition))
+            self.Model_List.append('Model 9.1 - DelayIndInhibition')
+        
+            # -------------------------------------------------------------------------------- #
         
     def RunModelSelection(self):
         # -------------------------------------------------------------------------------- #
@@ -398,9 +398,37 @@ class InducibleSystem:
         
         ### create a table with (Model, SSE, AIC, Rank)
         TableData = []
-        Header = ["Model", "SSE", "AIC", "Rank"]
+        Header = ["Model", "SSE", "AIC", "\u0394AIC", "Evidence", "Rank"]
+        
+        i = 0
+        dAIC = []
+        Evidence = []
+        for x in self.AIC_Results:
+            dAIC.append(x - self.min_AIC)
+            if (dAIC[i] == 0):
+                Evidence.append('-')
+            elif (dAIC[i] > 0) and (dAIC[i] <= 2):
+                Evidence.append('Substantial Support')
+            elif (dAIC[i] > 10):
+                Evidence.append('No Support')
+            else:
+                Evidence.append('Weak Support')
+            i += 1
+
+            
+#        #decide if the model with rank 1 is a better model with confidence
+#        Rank_ = [int(x) for x in Rank]
+#        BestEvidence = Evidence[Rank_.index(2)]
+        
+        if 'Substantial Support' in Evidence:
+            Count = Evidence.count('Substantial Support')
+            BestEvidence = 'low confidence. There are ' + str(Count) + 'other comparably good models'
+        else:
+            BestEvidence = 'confidence'
+        
+        
         for i in range(0, len(self.Model_List)):
-            TableData.append([str(self.Model_List[i]), str(self.SSE_Combined[i]), str(self.AIC_Results[i]), str(int(Rank[i]))])
+            TableData.append([str(self.Model_List[i]), str(self.SSE_Combined[i]), str(self.AIC_Results[i]), str(dAIC[i]), Evidence[i], str(int(Rank[i]))])
         Table = tabulate(TableData, Header, tablefmt='orgtbl')
         print(Table)
         
@@ -408,7 +436,9 @@ class InducibleSystem:
         Txtfilename1, DateTimenow = Txtfilename.gettxtfilename()
         print('\nText File Generated:', Txtfilename)
         
-        f = open(Txtfilename1,"a+")
+        Txtpath = "Results\\" + Txtfilename1
+        
+        f = open(Txtpath,encoding = 'utf-8', mode ="a+")
         
         f.write('Input File name: '+self.Input_filename_+'\n')
         f.write('\n')
@@ -416,7 +446,7 @@ class InducibleSystem:
         f.write('\n')
         f.write(str(Table))
         f.write('\n')
-        f.write('Recommended Model: '+self.Best_Model+'\n')
+        f.write('Recommended Model: '+self.Best_Model + ' with ' + BestEvidence +'\n')
         f.write('\n')
         f.write('Optimized Parameters:\n')
         
@@ -442,14 +472,16 @@ class InducibleSystem:
         ### To export Model Data in CSV file
         ExportDataFile = input("Please insert 'yes/no' to export Model data file): \n")
         
-        while not ((ExportDataFile == 'yes') or (ExportDataFile == 'no')):
+        while not ((ExportDataFile.casefold() == 'yes') or (ExportDataFile.casefold() == 'no')):
              ExportDataFile = input("Error: Incorrect Choice! Please insert either yes or no only:\n")
                 
                 
-        if ExportDataFile == 'yes':
+        if ExportDataFile.casefold() == 'yes':
             CSVfileName = Txtfilename.getcsvfilename()
             VariableMatrixData = self.VariableMatrix[-1][:,:].tolist()
-            with open(CSVfileName, 'w', newline='') as csvfile:
+            
+            CSVfilePath = "Results/" + CSVfileName
+            with open(CSVfilePath, 'w', newline='') as csvfile:
                 CF = csv.writer(csvfile, delimiter=',')
                 CF.writerow(['Time(min)'] + self.DataLegend)
                 for i in range(0, len(self.Time)):

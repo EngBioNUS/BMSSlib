@@ -72,7 +72,7 @@ class LogicGatesSystem:
         Data_array_numcols = self.Data_array1.shape[1]    # Number of RFP Data Per Inducer
         self.Sample_size = (Data_array_numrows - 1) * Data_array_numcols
         
-    def RunModels(self, iteration = 1):
+    def RunModels(self, SystemOpt = 'NOT', iteration = 1):
         
         # -------------------------------------------------------------------------------- #
 
@@ -89,318 +89,325 @@ class LogicGatesSystem:
         # -------------------------------------------------------------------------------- #
         
         for loop in range(0, iteration):
+            
+            if (SystemOpt.casefold() == 'not'):
         
-            ### Model 1.0 - NOTgate ###
-            SystemType = 'NOTgate'
-            Param_NOTgate, SSE_NOTgate, y0_NOTgate, VarName_NOTgate, ParamName_NOTgate, ParamUnits_NOTgate\
-                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        
-            self.SSE_Combined.append(SSE_NOTgate)
-            self.ParamName_List.append(ParamName_NOTgate)
-            self.Param_List.append(Param_NOTgate)
-            self.ParamUnits_List.append(ParamUnits_NOTgate)
-            self.VarName_List.append(VarName_NOTgate)
-            self.y0_List.append(y0_NOTgate)
-            self.Num_Param_List.append(len(Param_NOTgate))
-            self.Model_List.append('Model 1.0 - NOTgate')
-        
-            ### Model 1.1 - NOTgateKMat ###
-            SystemType = 'NOTgateKMat'
-            Param_NOTgateKMat, SSE_NOTgateKMat, y0_NOTgateKMat, VarName_NOTgateKMat, ParamName_NOTgateKMat, ParamUnits_NOTgateKMat\
-                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        
-            self.SSE_Combined.append(SSE_NOTgateKMat)
-            self.ParamName_List.append(ParamName_NOTgateKMat)
-            self.Param_List.append(Param_NOTgateKMat)
-            self.ParamUnits_List.append(ParamUnits_NOTgateKMat)
-            self.VarName_List.append(VarName_NOTgateKMat)
-            self.y0_List.append(y0_NOTgateKMat)
-            self.Num_Param_List.append(len(Param_NOTgateKMat))
-            self.Model_List.append('Model 1.1 - NOTgateKMat')
-        
-        
-            # -------------------------------------------------------------------------------- #
-        
-            ### Model 1.2 - NOTgateSingle ###
-            SystemType = 'NOTgateSingle'
-            Param_NOTgateSingle, SSE_NOTgateSingle, y0_NOTgateSingle, VarName_NOTgateSingle, ParamName_NOTgateSingle, ParamUnits_NOTgateSingle\
-                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        
-            self.SSE_Combined.append(SSE_NOTgateSingle)
-            self.ParamName_List.append(ParamName_NOTgateSingle)
-            self.Param_List.append(Param_NOTgateSingle)
-            self.ParamUnits_List.append(ParamUnits_NOTgateSingle)
-            self.VarName_List.append(VarName_NOTgateSingle)
-            self.y0_List.append(y0_NOTgateSingle)
-            self.Num_Param_List.append(len(Param_NOTgateSingle))
-            self.Model_List.append('Model 1.2 - NOTgateSingle')
-        
-            ### Model 1.3 - NOTgateSingleKMat ###
-            SystemType = 'NOTgateSingleKMat'
-            Param_NOTgateSingleKMat, SSE_NOTgateSingleKMat, y0_NOTgateSingleKMat, VarName_NOTgateSingleKMat, ParamName_NOTgateSingleKMat, ParamUnits_NOTgateSingleKMat\
-                = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        
-            self.SSE_Combined.append(SSE_NOTgateSingleKMat)
-            self.ParamName_List.append(ParamName_NOTgateSingleKMat)
-            self.Param_List.append(Param_NOTgateSingleKMat)
-            self.ParamUnits_List.append(ParamUnits_NOTgateSingleKMat)
-            self.VarName_List.append(VarName_NOTgateSingleKMat)
-            self.y0_List.append(y0_NOTgateSingleKMat)
-            self.Num_Param_List.append(len(Param_NOTgateSingleKMat))
-            self.Model_List.append('Model 1.3 - NOTgateSingleKMat')
-        
-        
-            # -------------------------------------------------------------------------------- #
-        
-            ### Model 2.0 - ANDgate ###
-        #    SystemType = 'ANDgate'
-        #    Param_ANDgate, SSE_ANDgate, y0_ANDgate, VarName_ANDgate, ParamName_ANDgate, ParamUnits_ANDgate \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ANDgate)
-        #    self.ParamName_List.append(ParamName_ANDgate)
-        #    self.Param_List.append(Param_ANDgate)
-        #    self.ParamUnits_List.append(ParamUnits_ANDgate)
-        #    self.VarName_List.append(VarName_ANDgate)
-        #    self.y0_List.append(y0_ANDgate)
-        #    self.Num_Param_List.append(len(Param_ANDgate))
-        #    self.Model_List.append('Model 2.0 - ANDgate')
-        #
-        #    ### Model 2.1 - ANDgateBLeak1 ###
-        #    SystemType = 'ANDgateBLeak1'
-        #    Param_ANDgateBLeak1, SSE_ANDgateBLeak1, y0_ANDgateBLeak1, VarName_ANDgateBLeak1, ParamName_ANDgateBLeak1, ParamUnits_ANDgateBLeak1 \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ANDgateBLeak1)
-        #    self.ParamName_List.append(ParamName_ANDgateBLeak1)
-        #    self.Param_List.append(Param_ANDgateBLeak1)
-        #    self.ParamUnits_List.append(ParamUnits_ANDgateBLeak1)
-        #    self.VarName_List.append(VarName_ANDgateBLeak1)
-        #    self.y0_List.append(y0_ANDgateBLeak1)
-        #    self.Num_Param_List.append(len(Param_ANDgateBLeak1))
-        #    self.Model_List.append('Model 2.1 - ANDgateBLeak1')
-        #
-        #    ### Model 2.2 - ANDgateBLeak2 ###
-        #    SystemType = 'ANDgateBLeak2'
-        #    Param_ANDgateBLeak2, SSE_ANDgateBLeak2, y0_ANDgateBLeak2, VarName_ANDgateBLeak2, ParamName_ANDgateBLeak2, ParamUnits_ANDgateBLeak2 \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ANDgateBLeak2)
-        #    self.ParamName_List.append(ParamName_ANDgateBLeak2)
-        #    self.Param_List.append(Param_ANDgateBLeak2)
-        #    self.ParamUnits_List.append(ParamUnits_ANDgateBLeak2)
-        #    self.VarName_List.append(VarName_ANDgateBLeak2)
-        #    self.y0_List.append(y0_ANDgateBLeak2)
-        #    self.Num_Param_List.append(len(Param_ANDgateBLeak2))
-        #    self.Model_List.append('Model 2.2 - ANDgateBLeak2')
-        #
-        #    ### Model 2.3 - ANDgateBLeak3 ###
-        #    SystemType = 'ANDgateBLeak3'
-        #    Param_ANDgateBLeak3, SSE_ANDgateBLeak3, y0_ANDgateBLeak3, VarName_ANDgateBLeak3, ParamName_ANDgateBLeak3, ParamUnits_ANDgateBLeak3 \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ANDgateBLeak3)
-        #    self.ParamName_List.append(ParamName_ANDgateBLeak3)
-        #    self.Param_List.append(Param_ANDgateBLeak3)
-        #    self.ParamUnits_List.append(ParamUnits_ANDgateBLeak3)
-        #    self.VarName_List.append(VarName_ANDgateBLeak3)
-        #    self.y0_List.append(y0_ANDgateBLeak3)
-        #    self.Num_Param_List.append(len(Param_ANDgateBLeak3))
-        #    self.Model_List.append('Model 2.3 - ANDgateBLeak3')
-        
-            ### Model 2.4 - ANDgateBLeak13 ###
-        #    SystemType = 'ANDgateBLeak13'
-        #    Param_ANDgateBLeak13, SSE_ANDgateBLeak13, y0_ANDgateBLeak13, VarName_ANDgateBLeak13, ParamName_ANDgateBLeak13, ParamUnits_ANDgateBLeak13 \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ANDgateBLeak13)
-        #    self.ParamName_List.append(ParamName_ANDgateBLeak13)
-        #    self.Param_List.append(Param_ANDgateBLeak13)
-        #    self.ParamUnits_List.append(ParamUnits_ANDgateBLeak13)
-        #    self.VarName_List.append(VarName_ANDgateBLeak13)
-        #    self.y0_List.append(y0_ANDgateBLeak13)
-        #    self.Num_Param_List.append(len(Param_ANDgateBLeak13))
-        #    self.Model_List.append('Model 2.4 - ANDgateBLeak13')
-        #
-        #    ### Model 2.5 - ANDgateBLeak13KMat ###
-        #    SystemType = 'ANDgateBLeak13KMat'
-        #    Param_ANDgateBLeak13KMat, SSE_ANDgateBLeak13KMat, y0_ANDgateBLeak13KMat, VarName_ANDgateBLeak13KMat, ParamName_ANDgateBLeak13KMat, ParamUnits_ANDgateBLeak13KMat \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ANDgateBLeak13KMat)
-        #    self.ParamName_List.append(ParamName_ANDgateBLeak13KMat)
-        #    self.Param_List.append(Param_ANDgateBLeak13KMat)
-        #    self.ParamUnits_List.append(ParamUnits_ANDgateBLeak13KMat)
-        #    self.VarName_List.append(VarName_ANDgateBLeak13KMat)
-        #    self.y0_List.append(y0_ANDgateBLeak13KMat)
-        #    self.Num_Param_List.append(len(Param_ANDgateBLeak13KMat))
-        #    self.Model_List.append('Model 2.5 - ANDgateBLeak13KMat')
+                ### Model 1.0 - NOTgate ###
+                SystemType = 'NOTgate'
+                Param_NOTgate, SSE_NOTgate, y0_NOTgate, VarName_NOTgate, ParamName_NOTgate, ParamUnits_NOTgate\
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_NOTgate)
+                self.ParamName_List.append(ParamName_NOTgate)
+                self.Param_List.append(Param_NOTgate)
+                self.ParamUnits_List.append(ParamUnits_NOTgate)
+                self.VarName_List.append(VarName_NOTgate)
+                self.y0_List.append(y0_NOTgate)
+                self.Num_Param_List.append(len(Param_NOTgate))
+                self.Model_List.append('Model 1.0 - NOTgate')
+            
+                ### Model 1.1 - NOTgateKMat ###
+                SystemType = 'NOTgateKMat'
+                Param_NOTgateKMat, SSE_NOTgateKMat, y0_NOTgateKMat, VarName_NOTgateKMat, ParamName_NOTgateKMat, ParamUnits_NOTgateKMat\
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_NOTgateKMat)
+                self.ParamName_List.append(ParamName_NOTgateKMat)
+                self.Param_List.append(Param_NOTgateKMat)
+                self.ParamUnits_List.append(ParamUnits_NOTgateKMat)
+                self.VarName_List.append(VarName_NOTgateKMat)
+                self.y0_List.append(y0_NOTgateKMat)
+                self.Num_Param_List.append(len(Param_NOTgateKMat))
+                self.Model_List.append('Model 1.1 - NOTgateKMat')
+            
+            
+                # -------------------------------------------------------------------------------- #
+            
+                ### Model 1.2 - NOTgateSingle ###
+                SystemType = 'NOTgateSingle'
+                Param_NOTgateSingle, SSE_NOTgateSingle, y0_NOTgateSingle, VarName_NOTgateSingle, ParamName_NOTgateSingle, ParamUnits_NOTgateSingle\
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_NOTgateSingle)
+                self.ParamName_List.append(ParamName_NOTgateSingle)
+                self.Param_List.append(Param_NOTgateSingle)
+                self.ParamUnits_List.append(ParamUnits_NOTgateSingle)
+                self.VarName_List.append(VarName_NOTgateSingle)
+                self.y0_List.append(y0_NOTgateSingle)
+                self.Num_Param_List.append(len(Param_NOTgateSingle))
+                self.Model_List.append('Model 1.2 - NOTgateSingle')
+            
+                ### Model 1.3 - NOTgateSingleKMat ###
+                SystemType = 'NOTgateSingleKMat'
+                Param_NOTgateSingleKMat, SSE_NOTgateSingleKMat, y0_NOTgateSingleKMat, VarName_NOTgateSingleKMat, ParamName_NOTgateSingleKMat, ParamUnits_NOTgateSingleKMat\
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_NOTgateSingleKMat)
+                self.ParamName_List.append(ParamName_NOTgateSingleKMat)
+                self.Param_List.append(Param_NOTgateSingleKMat)
+                self.ParamUnits_List.append(ParamUnits_NOTgateSingleKMat)
+                self.VarName_List.append(VarName_NOTgateSingleKMat)
+                self.y0_List.append(y0_NOTgateSingleKMat)
+                self.Num_Param_List.append(len(Param_NOTgateSingleKMat))
+                self.Model_List.append('Model 1.3 - NOTgateSingleKMat')
+            
         
             # -------------------------------------------------------------------------------- #
-        
-        #    ### Model 3.0 - ORgate ###
-        #    SystemType = 'ORgate'
-        #    Param_ORgate, SSE_ORgate, y0_ORgate, VarName_ORgate, ParamName_ORgate, ParamUnits_ORgate \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgate)
-        #    self.ParamName_List.append(ParamName_ORgate)
-        #    self.Param_List.append(Param_ORgate)
-        #    self.ParamUnits_List.append(ParamUnits_ORgate)
-        #    self.VarName_List.append(VarName_ORgate)
-        #    self.y0_List.append(y0_ORgate)
-        #    self.Num_Param_List.append(len(Param_ORgate))
-        #    self.Model_List.append('Model 3.0 - ORgate')
-        #
-        #    ### Model 3.1 - ORgate ###
-        #    SystemType = 'ORgateDelay'
-        #    Param_ORgateDelay, SSE_ORgateDelay, y0_ORgateDelay, VarName_ORgateDelay, ParamName_ORgateDelay, ParamUnits_ORgateDelay \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgateDelay)
-        #    self.ParamName_List.append(ParamName_ORgateDelay)
-        #    self.Param_List.append(Param_ORgateDelay)
-        #    self.ParamUnits_List.append(ParamUnits_ORgateDelay)
-        #    self.VarName_List.append(VarName_ORgateDelay)
-        #    self.y0_List.append(y0_ORgateDelay)
-        #    self.Num_Param_List.append(len(Param_ORgateDelay))
-        #    self.Model_List.append('Model 3.1 - ORgateDelay')
-        #
-        #    ### Model 3.2 - ORgate_Delay ###
-        #    SystemType = 'ORgate_Delay'
-        #    Param_ORgate_Delay, SSE_ORgate_Delay, y0_ORgate_Delay, VarName_ORgate_Delay, ParamName_ORgate_Delay, ParamUnits_ORgate_Delay \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgate_Delay)
-        #    self.ParamName_List.append(ParamName_ORgate_Delay)
-        #    self.Param_List.append(Param_ORgate_Delay)
-        #    self.ParamUnits_List.append(ParamUnits_ORgate_Delay)
-        #    self.VarName_List.append(VarName_ORgate_Delay)
-        #    self.y0_List.append(y0_ORgate_Delay)
-        #    self.Num_Param_List.append(len(Param_ORgate_Delay))
-        #    self.Model_List.append('Model 3.2 - ORgate_Delay')
-        #
-        #    ### Model 3.3 - ORgateDegradation ###
-        #    SystemType = 'ORgateDegradation'
-        #    Param_ORgateDegradation, SSE_ORgateDegradation, y0_ORgateDegradation, VarName_ORgateDegradation, ParamName_ORgateDegradation, ParamUnits_ORgateDegradation \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgateDegradation)
-        #    self.ParamName_List.append(ParamName_ORgateDegradation)
-        #    self.Param_List.append(Param_ORgateDegradation)
-        #    self.ParamUnits_List.append(ParamUnits_ORgateDegradation)
-        #    self.VarName_List.append(VarName_ORgateDegradation)
-        #    self.y0_List.append(y0_ORgateDegradation)
-        #    self.Num_Param_List.append(len(Param_ORgateDegradation))
-        #    self.Model_List.append('Model 3.3 - ORgateDegradation')
-        #
-        #    ### Model 3.4 - ORgate_Degradation ###
-        #    SystemType = 'ORgate_Degradation'
-        #    Param_ORgate_Degradation, SSE_ORgate_Degradation, y0_ORgate_Degradation, VarName_ORgate_Degradation, ParamName_ORgate_Degradation, ParamUnits_ORgate_Degradation \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgate_Degradation)
-        #    self.ParamName_List.append(ParamName_ORgate_Degradation)
-        #    self.Param_List.append(Param_ORgate_Degradation)
-        #    self.ParamUnits_List.append(ParamUnits_ORgate_Degradation)
-        #    self.VarName_List.append(VarName_ORgate_Degradation)
-        #    self.y0_List.append(y0_ORgate_Degradation)
-        #    self.Num_Param_List.append(len(Param_ORgate_Degradation))
-        #    self.Model_List.append('Model 3.4 - ORgate_Degradation')
-        #
-        #    # -------------------------------------------------------------------------------- #
-        #
-        #    ### Model 3.5 - ORgateDelayDegradation ###
-        #    SystemType = 'ORgateDelayDegradation'
-        #    Param_ORgateDelayDegradation, SSE_ORgateDelayDegradation, y0_ORgateDelayDegradation, \
-        #    VarName_ORgateDelayDegradation, ParamName_ORgateDelayDegradation, ParamUnits_ORgateDelayDegradation \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgateDelayDegradation)
-        #    self.ParamName_List.append(ParamName_ORgateDelayDegradation)
-        #    self.Param_List.append(Param_ORgateDelayDegradation)
-        #    self.ParamUnits_List.append(ParamUnits_ORgateDelayDegradation)
-        #    self.VarName_List.append(VarName_ORgateDelayDegradation)
-        #    self.y0_List.append(y0_ORgateDelayDegradation)
-        #    self.Num_Param_List.append(len(Param_ORgateDelayDegradation))
-        #    self.Model_List.append('Model 3.5 - ORgateDelayDegradation')
-        #
-        #    ### Model 3.6 - ORgateDegradationDelay ###
-        #    SystemType = 'ORgateDegradationDelay'
-        #    Param_ORgateDegradationDelay, SSE_ORgateDegradationDelay, y0_ORgateDegradationDelay, \
-        #    VarName_ORgateDegradationDelay, ParamName_ORgateDegradationDelay, ParamUnits_ORgateDegradationDelay \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgateDegradationDelay)
-        #    self.ParamName_List.append(ParamName_ORgateDegradationDelay)
-        #    self.Param_List.append(Param_ORgateDegradationDelay)
-        #    self.ParamUnits_List.append(ParamUnits_ORgateDegradationDelay)
-        #    self.VarName_List.append(VarName_ORgateDegradationDelay)
-        #    self.y0_List.append(y0_ORgateDegradationDelay)
-        #    self.Num_Param_List.append(len(Param_ORgateDegradationDelay))
-        #    self.Model_List.append('Model 3.6 - ORgateDegradationDelay')
-        #
-        #    ### Model 3.7 - ORgateDelayDelay ###
-        #    SystemType = 'ORgateDelayDelay'
-        #    Param_ORgateDelayDelay, SSE_ORgateDelayDelay, y0_ORgateDelayDelay, \
-        #    VarName_ORgateDelayDelay, ParamName_ORgateDelayDelay, ParamUnits_ORgateDelayDelay \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgateDelayDelay)
-        #    self.ParamName_List.append(ParamName_ORgateDelayDelay)
-        #    self.Param_List.append(Param_ORgateDelayDelay)
-        #    self.ParamUnits_List.append(ParamUnits_ORgateDelayDelay)
-        #    self.VarName_List.append(VarName_ORgateDelayDelay)
-        #    self.y0_List.append(y0_ORgateDelayDelay)
-        #    self.Num_Param_List.append(len(Param_ORgateDelayDelay))
-        #    self.Model_List.append('Model 3.7 - ORgateDelayDelay')
+            
+            elif SystemOpt.casefold() == 'and':
+                ### Model 2.0 - ANDgate ###
+                SystemType = 'ANDgate'
+                Param_ANDgate, SSE_ANDgate, y0_ANDgate, VarName_ANDgate, ParamName_ANDgate, ParamUnits_ANDgate \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ANDgate)
+                self.ParamName_List.append(ParamName_ANDgate)
+                self.Param_List.append(Param_ANDgate)
+                self.ParamUnits_List.append(ParamUnits_ANDgate)
+                self.VarName_List.append(VarName_ANDgate)
+                self.y0_List.append(y0_ANDgate)
+                self.Num_Param_List.append(len(Param_ANDgate))
+                self.Model_List.append('Model 2.0 - ANDgate')
+            
+                ### Model 2.1 - ANDgateBLeak1 ###
+                SystemType = 'ANDgateBLeak1'
+                Param_ANDgateBLeak1, SSE_ANDgateBLeak1, y0_ANDgateBLeak1, VarName_ANDgateBLeak1, ParamName_ANDgateBLeak1, ParamUnits_ANDgateBLeak1 \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ANDgateBLeak1)
+                self.ParamName_List.append(ParamName_ANDgateBLeak1)
+                self.Param_List.append(Param_ANDgateBLeak1)
+                self.ParamUnits_List.append(ParamUnits_ANDgateBLeak1)
+                self.VarName_List.append(VarName_ANDgateBLeak1)
+                self.y0_List.append(y0_ANDgateBLeak1)
+                self.Num_Param_List.append(len(Param_ANDgateBLeak1))
+                self.Model_List.append('Model 2.1 - ANDgateBLeak1')
+            
+                ### Model 2.2 - ANDgateBLeak2 ###
+                SystemType = 'ANDgateBLeak2'
+                Param_ANDgateBLeak2, SSE_ANDgateBLeak2, y0_ANDgateBLeak2, VarName_ANDgateBLeak2, ParamName_ANDgateBLeak2, ParamUnits_ANDgateBLeak2 \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ANDgateBLeak2)
+                self.ParamName_List.append(ParamName_ANDgateBLeak2)
+                self.Param_List.append(Param_ANDgateBLeak2)
+                self.ParamUnits_List.append(ParamUnits_ANDgateBLeak2)
+                self.VarName_List.append(VarName_ANDgateBLeak2)
+                self.y0_List.append(y0_ANDgateBLeak2)
+                self.Num_Param_List.append(len(Param_ANDgateBLeak2))
+                self.Model_List.append('Model 2.2 - ANDgateBLeak2')
+            
+                ### Model 2.3 - ANDgateBLeak3 ###
+                SystemType = 'ANDgateBLeak3'
+                Param_ANDgateBLeak3, SSE_ANDgateBLeak3, y0_ANDgateBLeak3, VarName_ANDgateBLeak3, ParamName_ANDgateBLeak3, ParamUnits_ANDgateBLeak3 \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ANDgateBLeak3)
+                self.ParamName_List.append(ParamName_ANDgateBLeak3)
+                self.Param_List.append(Param_ANDgateBLeak3)
+                self.ParamUnits_List.append(ParamUnits_ANDgateBLeak3)
+                self.VarName_List.append(VarName_ANDgateBLeak3)
+                self.y0_List.append(y0_ANDgateBLeak3)
+                self.Num_Param_List.append(len(Param_ANDgateBLeak3))
+                self.Model_List.append('Model 2.3 - ANDgateBLeak3')
+            
+                ## Model 2.4 - ANDgateBLeak13 ###
+                SystemType = 'ANDgateBLeak13'
+                Param_ANDgateBLeak13, SSE_ANDgateBLeak13, y0_ANDgateBLeak13, VarName_ANDgateBLeak13, ParamName_ANDgateBLeak13, ParamUnits_ANDgateBLeak13 \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ANDgateBLeak13)
+                self.ParamName_List.append(ParamName_ANDgateBLeak13)
+                self.Param_List.append(Param_ANDgateBLeak13)
+                self.ParamUnits_List.append(ParamUnits_ANDgateBLeak13)
+                self.VarName_List.append(VarName_ANDgateBLeak13)
+                self.y0_List.append(y0_ANDgateBLeak13)
+                self.Num_Param_List.append(len(Param_ANDgateBLeak13))
+                self.Model_List.append('Model 2.4 - ANDgateBLeak13')
+            
+                ### Model 2.5 - ANDgateBLeak13KMat ###
+                SystemType = 'ANDgateBLeak13KMat'
+                Param_ANDgateBLeak13KMat, SSE_ANDgateBLeak13KMat, y0_ANDgateBLeak13KMat, VarName_ANDgateBLeak13KMat, ParamName_ANDgateBLeak13KMat, ParamUnits_ANDgateBLeak13KMat \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ANDgateBLeak13KMat)
+                self.ParamName_List.append(ParamName_ANDgateBLeak13KMat)
+                self.Param_List.append(Param_ANDgateBLeak13KMat)
+                self.ParamUnits_List.append(ParamUnits_ANDgateBLeak13KMat)
+                self.VarName_List.append(VarName_ANDgateBLeak13KMat)
+                self.y0_List.append(y0_ANDgateBLeak13KMat)
+                self.Num_Param_List.append(len(Param_ANDgateBLeak13KMat))
+                self.Model_List.append('Model 2.5 - ANDgateBLeak13KMat')
         
             # -------------------------------------------------------------------------------- #
+            elif (SystemOpt.casefold() == 'or'):
+                
+                ### Model 3.0 - ORgate ###
+                SystemType = 'ORgate'
+                Param_ORgate, SSE_ORgate, y0_ORgate, VarName_ORgate, ParamName_ORgate, ParamUnits_ORgate \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgate)
+                self.ParamName_List.append(ParamName_ORgate)
+                self.Param_List.append(Param_ORgate)
+                self.ParamUnits_List.append(ParamUnits_ORgate)
+                self.VarName_List.append(VarName_ORgate)
+                self.y0_List.append(y0_ORgate)
+                self.Num_Param_List.append(len(Param_ORgate))
+                self.Model_List.append('Model 3.0 - ORgate')
+            
+                ### Model 3.1 - ORgate ###
+                SystemType = 'ORgateDelay'
+                Param_ORgateDelay, SSE_ORgateDelay, y0_ORgateDelay, VarName_ORgateDelay, ParamName_ORgateDelay, ParamUnits_ORgateDelay \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgateDelay)
+                self.ParamName_List.append(ParamName_ORgateDelay)
+                self.Param_List.append(Param_ORgateDelay)
+                self.ParamUnits_List.append(ParamUnits_ORgateDelay)
+                self.VarName_List.append(VarName_ORgateDelay)
+                self.y0_List.append(y0_ORgateDelay)
+                self.Num_Param_List.append(len(Param_ORgateDelay))
+                self.Model_List.append('Model 3.1 - ORgateDelay')
+            
+                ### Model 3.2 - ORgate_Delay ###
+                SystemType = 'ORgate_Delay'
+                Param_ORgate_Delay, SSE_ORgate_Delay, y0_ORgate_Delay, VarName_ORgate_Delay, ParamName_ORgate_Delay, ParamUnits_ORgate_Delay \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgate_Delay)
+                self.ParamName_List.append(ParamName_ORgate_Delay)
+                self.Param_List.append(Param_ORgate_Delay)
+                self.ParamUnits_List.append(ParamUnits_ORgate_Delay)
+                self.VarName_List.append(VarName_ORgate_Delay)
+                self.y0_List.append(y0_ORgate_Delay)
+                self.Num_Param_List.append(len(Param_ORgate_Delay))
+                self.Model_List.append('Model 3.2 - ORgate_Delay')
+            
+                ### Model 3.3 - ORgateDegradation ###
+                SystemType = 'ORgateDegradation'
+                Param_ORgateDegradation, SSE_ORgateDegradation, y0_ORgateDegradation, VarName_ORgateDegradation, ParamName_ORgateDegradation, ParamUnits_ORgateDegradation \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgateDegradation)
+                self.ParamName_List.append(ParamName_ORgateDegradation)
+                self.Param_List.append(Param_ORgateDegradation)
+                self.ParamUnits_List.append(ParamUnits_ORgateDegradation)
+                self.VarName_List.append(VarName_ORgateDegradation)
+                self.y0_List.append(y0_ORgateDegradation)
+                self.Num_Param_List.append(len(Param_ORgateDegradation))
+                self.Model_List.append('Model 3.3 - ORgateDegradation')
+            
+                ### Model 3.4 - ORgate_Degradation ###
+                SystemType = 'ORgate_Degradation'
+                Param_ORgate_Degradation, SSE_ORgate_Degradation, y0_ORgate_Degradation, VarName_ORgate_Degradation, ParamName_ORgate_Degradation, ParamUnits_ORgate_Degradation \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgate_Degradation)
+                self.ParamName_List.append(ParamName_ORgate_Degradation)
+                self.Param_List.append(Param_ORgate_Degradation)
+                self.ParamUnits_List.append(ParamUnits_ORgate_Degradation)
+                self.VarName_List.append(VarName_ORgate_Degradation)
+                self.y0_List.append(y0_ORgate_Degradation)
+                self.Num_Param_List.append(len(Param_ORgate_Degradation))
+                self.Model_List.append('Model 3.4 - ORgate_Degradation')
+            
+                # -------------------------------------------------------------------------------- #
+            
+                ### Model 3.5 - ORgateDelayDegradation ###
+                SystemType = 'ORgateDelayDegradation'
+                Param_ORgateDelayDegradation, SSE_ORgateDelayDegradation, y0_ORgateDelayDegradation, \
+                VarName_ORgateDelayDegradation, ParamName_ORgateDelayDegradation, ParamUnits_ORgateDelayDegradation \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgateDelayDegradation)
+                self.ParamName_List.append(ParamName_ORgateDelayDegradation)
+                self.Param_List.append(Param_ORgateDelayDegradation)
+                self.ParamUnits_List.append(ParamUnits_ORgateDelayDegradation)
+                self.VarName_List.append(VarName_ORgateDelayDegradation)
+                self.y0_List.append(y0_ORgateDelayDegradation)
+                self.Num_Param_List.append(len(Param_ORgateDelayDegradation))
+                self.Model_List.append('Model 3.5 - ORgateDelayDegradation')
+            
+                ### Model 3.6 - ORgateDegradationDelay ###
+                SystemType = 'ORgateDegradationDelay'
+                Param_ORgateDegradationDelay, SSE_ORgateDegradationDelay, y0_ORgateDegradationDelay, \
+                VarName_ORgateDegradationDelay, ParamName_ORgateDegradationDelay, ParamUnits_ORgateDegradationDelay \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgateDegradationDelay)
+                self.ParamName_List.append(ParamName_ORgateDegradationDelay)
+                self.Param_List.append(Param_ORgateDegradationDelay)
+                self.ParamUnits_List.append(ParamUnits_ORgateDegradationDelay)
+                self.VarName_List.append(VarName_ORgateDegradationDelay)
+                self.y0_List.append(y0_ORgateDegradationDelay)
+                self.Num_Param_List.append(len(Param_ORgateDegradationDelay))
+                self.Model_List.append('Model 3.6 - ORgateDegradationDelay')
+            
+                ### Model 3.7 - ORgateDelayDelay ###
+                SystemType = 'ORgateDelayDelay'
+                Param_ORgateDelayDelay, SSE_ORgateDelayDelay, y0_ORgateDelayDelay, \
+                VarName_ORgateDelayDelay, ParamName_ORgateDelayDelay, ParamUnits_ORgateDelayDelay \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgateDelayDelay)
+                self.ParamName_List.append(ParamName_ORgateDelayDelay)
+                self.Param_List.append(Param_ORgateDelayDelay)
+                self.ParamUnits_List.append(ParamUnits_ORgateDelayDelay)
+                self.VarName_List.append(VarName_ORgateDelayDelay)
+                self.y0_List.append(y0_ORgateDelayDelay)
+                self.Num_Param_List.append(len(Param_ORgateDelayDelay))
+                self.Model_List.append('Model 3.7 - ORgateDelayDelay')
+            
+                #-------------------------------------------------------------------------------- #
+            
+                ### Model 3.8- OR with Delay Degradation (with resource competition at State11) System ###
+                SystemType = 'ORgateDelayDegradeResCompete'
+                Param_ORgateDelayDegradeResCompete, SSE_ORgateDelayDegradeResCompete, y0_ORgateDelayDegradeResCompete, \
+                VarName_ORgateDelayDegradeResCompete, ParamName_ORgateDelayDegradeResCompete, ParamUnits_ORgateDelayDegradeResCompete \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgateDelayDegradeResCompete)
+                self.ParamName_List.append(ParamName_ORgateDelayDegradeResCompete)
+                self.Param_List.append(Param_ORgateDelayDegradeResCompete)
+                self.ParamUnits_List.append(ParamUnits_ORgateDelayDegradeResCompete)
+                self.VarName_List.append(VarName_ORgateDelayDegradeResCompete)
+                self.y0_List.append(y0_ORgateDelayDegradeResCompete)
+                self.Num_Param_List.append(len(Param_ORgateDelayDegradeResCompete))
+                self.Model_List.append('Model 3.8 - ORgateDelayDegradeResCompete')
+            
+                ### Model 3.9- OR with Degradation Delay (with resource competition at State11) System ###
+                SystemType = 'ORgateDegradeDelayResCompete'
+                Param_ORgateDegradeDelayResCompete, SSE_ORgateDegradeDelayResCompete, y0_ORgateDegradeDelayResCompete, \
+                VarName_ORgateDegradeDelayResCompete, ParamName_ORgateDegradeDelayResCompete, ParamUnits_ORgateDegradeDelayResCompete \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgateDegradeDelayResCompete)
+                self.ParamName_List.append(ParamName_ORgateDegradeDelayResCompete)
+                self.Param_List.append(Param_ORgateDegradeDelayResCompete)
+                self.ParamUnits_List.append(ParamUnits_ORgateDegradeDelayResCompete)
+                self.VarName_List.append(VarName_ORgateDegradeDelayResCompete)
+                self.y0_List.append(y0_ORgateDegradeDelayResCompete)
+                self.Num_Param_List.append(len(Param_ORgateDegradeDelayResCompete))
+                self.Model_List.append('Model 3.9 - ORgateDegradeDelayResCompete')
+            
+                ### Model 3.10- OR with Delay Delay (with resource competition at State11) System ###
+                SystemType = 'ORgateDelayDelayResCompete'
+                Param_ORgateDelayDelayResCompete, SSE_ORgateDelayDelayResCompete, y0_ORgateDelayDelayResCompete, \
+                VarName_ORgateDelayDelayResCompete, ParamName_ORgateDelayDelayResCompete, ParamUnits_ORgateDelayDelayResCompete \
+                    = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
+            
+                self.SSE_Combined.append(SSE_ORgateDelayDelayResCompete)
+                self.ParamName_List.append(ParamName_ORgateDelayDelayResCompete)
+                self.Param_List.append(Param_ORgateDelayDelayResCompete)
+                self.ParamUnits_List.append(ParamUnits_ORgateDelayDelayResCompete)
+                self.VarName_List.append(VarName_ORgateDelayDelayResCompete)
+                self.y0_List.append(y0_ORgateDelayDelayResCompete)
+                self.Num_Param_List.append(len(Param_ORgateDelayDelayResCompete))
+                self.Model_List.append('Model 3.10 - ORgateDelayDelayResCompete')
         
-        #    ### Model 3.8- OR with Delay Degradation (with resource competition at State11) System ###
-        #    SystemType = 'ORgateDelayDegradeResCompete'
-        #    Param_ORgateDelayDegradeResCompete, SSE_ORgateDelayDegradeResCompete, y0_ORgateDelayDegradeResCompete, \
-        #    VarName_ORgateDelayDegradeResCompete, ParamName_ORgateDelayDegradeResCompete, ParamUnits_ORgateDelayDegradeResCompete \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgateDelayDegradeResCompete)
-        #    self.ParamName_List.append(ParamName_ORgateDelayDegradeResCompete)
-        #    self.Param_List.append(Param_ORgateDelayDegradeResCompete)
-        #    self.ParamUnits_List.append(ParamUnits_ORgateDelayDegradeResCompete)
-        #    self.VarName_List.append(VarName_ORgateDelayDegradeResCompete)
-        #    self.y0_List.append(y0_ORgateDelayDegradeResCompete)
-        #    self.Num_Param_List.append(len(Param_ORgateDelayDegradeResCompete))
-        #    self.Model_List.append('Model 3.8 - ORgateDelayDegradeResCompete')
-        
-        #    ### Model 3.9- OR with Degradation Delay (with resource competition at State11) System ###
-        #    SystemType = 'ORgateDegradeDelayResCompete'
-        #    Param_ORgateDegradeDelayResCompete, SSE_ORgateDegradeDelayResCompete, y0_ORgateDegradeDelayResCompete, \
-        #    VarName_ORgateDegradeDelayResCompete, ParamName_ORgateDegradeDelayResCompete, ParamUnits_ORgateDegradeDelayResCompete \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgateDegradeDelayResCompete)
-        #    self.ParamName_List.append(ParamName_ORgateDegradeDelayResCompete)
-        #    self.Param_List.append(Param_ORgateDegradeDelayResCompete)
-        #    self.ParamUnits_List.append(ParamUnits_ORgateDegradeDelayResCompete)
-        #    self.VarName_List.append(VarName_ORgateDegradeDelayResCompete)
-        #    self.y0_List.append(y0_ORgateDegradeDelayResCompete)
-        #    self.Num_Param_List.append(len(Param_ORgateDegradeDelayResCompete))
-        #    self.Model_List.append('Model 3.9 - ORgateDegradeDelayResCompete')
-        #
-        #    ### Model 3.10- OR with Delay Delay (with resource competition at State11) System ###
-        #    SystemType = 'ORgateDelayDelayResCompete'
-        #    Param_ORgateDelayDelayResCompete, SSE_ORgateDelayDelayResCompete, y0_ORgateDelayDelayResCompete, \
-        #    VarName_ORgateDelayDelayResCompete, ParamName_ORgateDelayDelayResCompete, ParamUnits_ORgateDelayDelayResCompete \
-        #        = self.LogicGLib1.Run_LogicGatesSystem(SystemType, self.Data_header1, self.Data_array1, self.NumState_)
-        #
-        #    self.SSE_Combined.append(SSE_ORgateDelayDelayResCompete)
-        #    self.ParamName_List.append(ParamName_ORgateDelayDelayResCompete)
-        #    self.Param_List.append(Param_ORgateDelayDelayResCompete)
-        #    self.ParamUnits_List.append(ParamUnits_ORgateDelayDelayResCompete)
-        #    self.VarName_List.append(VarName_ORgateDelayDelayResCompete)
-        #    self.y0_List.append(y0_ORgateDelayDelayResCompete)
-        #    self.Num_Param_List.append(len(Param_ORgateDelayDelayResCompete))
-        #    self.Model_List.append('Model 3.10 - ORgateDelayDelayResCompete')
+            else: 
+                print('Error in the selected logic gate system')
         
         # -------------------------------------------------------------------------------- #
         
@@ -498,9 +505,39 @@ class LogicGatesSystem:
         
         ### create a table with (Model, SSE, AIC, Rank)
         TableData = []
-        Header = ["Model", "SSE", "AIC", "Rank"]
+        Header = ["Model", "SSE", "AIC", "\u0394AIC", "Evidence", "Rank"]
+        
+#        #use list comprehension
+#        dAIC = [x - self.min_AIC for x in self.AIC_Results]
+        
+        i = 0
+        dAIC = []
+        Evidence = []
+        for x in self.AIC_Results:
+            dAIC.append(x - self.min_AIC)
+            if (dAIC[i] == 0):
+                Evidence.append('-')
+            elif (dAIC[i] > 0) and (dAIC[i] <= 2):
+                Evidence.append('Substantial Support')
+            elif (dAIC[i] > 10):
+                Evidence.append('No Support')
+            else:
+                Evidence.append('Weak Support')
+            i += 1
+
+            
+#        #decide if the model with rank 1 is a better model with confidence
+#        Rank_ = [int(x) for x in Rank]
+#        BestEvidence = Evidence[Rank_.index(2)]
+        
+        if 'Substantial Support' in Evidence:
+            Count = Evidence.count('Substantial Support')
+            BestEvidence = 'low confidence. There are ' + str(Count) + 'other comparably good models'
+        else:
+            BestEvidence = 'confidence'
+        
         for i in range(0, len(self.Model_List)):
-            TableData.append([str(self.Model_List[i]), str(self.SSE_Combined[i]), str(self.AIC_Results[i]), str(int(Rank[i]))])
+            TableData.append([str(self.Model_List[i]), str(self.SSE_Combined[i]), str(self.AIC_Results[i]), str(dAIC[i]), Evidence[i], str(int(Rank[i]))])
         Table = tabulate(TableData, Header, tablefmt='orgtbl')
         print(Table)
         
@@ -508,15 +545,18 @@ class LogicGatesSystem:
         Txtfilename1, DateTimenow = Txtfilename.gettxtfilename()
         print('\nText File Generated:', Txtfilename)
         
-        f = open(Txtfilename1,"a+")
+        #f = open(Txtfilename1,"a+")
+        Txtpath = "Results\\" + Txtfilename1
+        
+        f = open(Txtpath,encoding = 'utf-8', mode ="a+")
         
         f.write('Input File name: '+self.Input_filename_+'\n')
         f.write('\n')
         f.write('Models Tested: '+str(self.Model_List)+'\n')
         f.write('\n')
         f.write(str(Table))
-        f.write('\n')
-        f.write('Recommended Model: '+self.Best_Model+'\n')
+        f.write('\n\n')
+        f.write('Recommended Model: '+self.Best_Model+ ' with ' + BestEvidence +'\n')
         f.write('\n')
         f.write('Optimized Parameters:\n')
         
@@ -543,13 +583,15 @@ class LogicGatesSystem:
         ### To export Model Data in CSV file
         ExportDataFile = input("Please insert 'yes/no' to export Model data file):")
     
-        while not ((ExportDataFile == 'yes') or (ExportDataFile == 'no')):
+        while not ((ExportDataFile.casefold() == 'yes') or (ExportDataFile.casefold() == 'no')):
              ExportDataFile = input("Error: Incorrect Choice! Please insert either yes or no only:\n")
     
-        if ExportDataFile == 'yes':
+        if ExportDataFile.casefold() == 'yes':
             CSVfileName = Txtfilename.getcsvfilename()
             VariableMatrixData = self.VariableMatrix[-1][:,:].tolist()
-            with open(CSVfileName, 'w', newline='') as csvfile:
+            
+            CSVfilePath = "Results/" + CSVfileName
+            with open(CSVfilePath, 'w', newline='') as csvfile:
                 CF = csv.writer(csvfile, delimiter=',')
                 CF.writerow(['Time(min)'] + self.DataLegend)
                 for i in range(0, len(self.Time)):
@@ -824,10 +866,10 @@ class LogicGatesSystem:
     # Helper function to simplify the whole process   
     ####################################################################    
         
-    def AutoRunLogicGatesSystem(self, Input_filename, NumState):
+    def AutoRunLogicGatesSystem(self, Inputfile, SystemOpt, NumState):
         
-        self.DataReader(Input_filename, NumState)
-        self.RunModels()
+        self.DataReader(Inputfile, NumState)
+        self.RunModels(SystemOpt)
         self.RunModelSelection()
         self.CreateOutputTextFile()
         self.ExportModelDataFile()

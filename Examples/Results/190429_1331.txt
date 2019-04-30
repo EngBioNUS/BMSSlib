@@ -1,0 +1,34 @@
+Input File name: InputData\LogicGate_NOTTop10d30LB_1.csv
+
+Models Tested: ['Model 1.0 - NOTgate', 'Model 1.1 - NOTgateKMat', 'Model 1.2 - NOTgateSingle', 'Model 1.3 - NOTgateSingleKMat']
+
+| Model                         |         SSE |      AIC |    ΔAIC | Evidence   |   Rank |
+|-------------------------------+-------------+----------+---------+------------+--------|
+| Model 1.0 - NOTgate           | 4.0027e-09  | -3538.71 |   0     | -          |      1 |
+| Model 1.1 - NOTgateKMat       | 3.41597e-07 | -2887.49 | 651.213 | No Support |      4 |
+| Model 1.2 - NOTgateSingle     | 1.3537e-08  | -3364.81 | 173.894 | No Support |      2 |
+| Model 1.3 - NOTgateSingleKMat | 1.37949e-08 | -3360.06 | 178.651 | No Support |      3 |
+
+Recommended Model: Model 1.0 - NOTgate with confidence
+
+Optimized Parameters:
+	syn_mRNA1 = 2.013792464213148e-06
+	syn_mRNA2 = 3.595063902336386e-05
+	syn_Pep = 0.007944357594029955
+	deg_Pep = 0.010245198290981486
+	Kmaxrep = 0.9988373056494961
+	Pepmax = 1.3129757624896722e-05
+	deg_mRNA1 = 0.1386
+ODE:
+dmRNA1dt = syn_mRNA1*(state) - (deg_mRNA *mRNA1)
+dPep1dt = (syn_Pep*mRNA1) - (deg_Pep*Pep1)
+dmRNA2dt = (syn_mRNA2*(1-Kmaxrep*(Pep1/Pepmax)))-(deg_mRNA * mRNA2)
+dPep2dt = (syn_Pep*mRNA2)-(deg_Pep*Pep2)
+
+Number of Data points: 146
+SSE of Ideal Model: 4.002701196210468e-09
+AIC of Ideal Model: -3538.7058418535303
+
+Time taken: 135.82976698875427s
+
+Date and Time: 29-04-2019, 13:31:31

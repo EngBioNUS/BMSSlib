@@ -42,8 +42,10 @@ def exportsbml(ODE, variable, Init, paramName, param, paramUnit):
     Model = model.toSBML()
 
     XMLfileName = Txtfilename.getxmlfilename()
+    
+    XMLfilePath = "Results\\" + XMLfileName
 
-    print(Model, file=open(XMLfileName, "w"))
+    print(Model, file=open(XMLfilePath, "w"))
 
 
 ###---------------------------------------------------------------------------#
