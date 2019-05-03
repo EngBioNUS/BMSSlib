@@ -13,12 +13,12 @@
 ## To Run Example File
 - To get started, at Spyder, File --> Open to browse and open the example file (__*Example_InducibleSystem, Example_ConstitutiveSystem, or Example_LogicGatesSystem*__) in .py located in the __BMSSlib-master/Examples/InputData__ folder. Select the file based on your system of interest. 
 - Click on the green Run button to execute the example file without modification.  
-- Proper comments have been included in each of the example file. Refer to the given *BMSS_User_Manual.pdf* for more detailed guidelines.
+- Proper comments have been included in each of the example file. Refer to the given __*BMSS_User_Manual.pdf*__ for more detailed guidelines.
 - The running model and the Sum Squared Error (SSE) followed by the type of optimizer (Global or Local) will be listed and continuously updated at the IPython console while the program is running. 
 - After the run has completed, users will be prompted to insert either yes or no to export the model simulation data file (.csv).  
 - Next, users will be asked to insert yes or no to set and visualize the corresponding SBOL-compliant gene circuit diagram. 
 - The preview of the resulting sample circuits for each of the example files can be seen at the [GitHub Examples] folder.  
-- All the output files will be exported to the __BMSSlib-master/Examples/Results__ folder (There will be a total of three files named according to the Year-Month-Day-hour-minute the time the run is completed: .txt details the model ranking table and the recommended best model candidate with its model formulation and estimated parameters; .csv includes the model simulation results for post-processing; and .xml file encodes the details of the best model candidate in Systems Biology Markup Language (SBML) format. The SBML file can be imported to other CAD tools for post-processing or further simulations.   
+- All the output files will be exported to the __BMSSlib-master/Examples/Results__ folder (There will be a total of three files named according to the Year-Month-Day-hour-minute the time the run is completed: *.txt* details the model ranking table and the recommended best model candidate with its model formulation and estimated parameters; *.csv* includes the model simulation results for post-processing; and *.xml* file encodes the details of the best model candidate in Systems Biology Markup Language (SBML) format. The SBML file can be imported to other CAD tools for post-processing or further simulations.   
 
 ### The Output Specifications for the Example Files (to be inserted when prompted at console):
 
@@ -57,7 +57,7 @@ __Logic Gate System__:
 - Click on the green Run button to execute the Example python file. 
 - It is advisable to repeat at least three times (depends on the nature of the characterization data trends, some models are just harder to converge to best fit the experimental data) to verify if any models from the BMSS libraries could well capture the newly imported .csv characterization file. 
 - The displayed output graphic figures can be saved by clicking on the Save icon on top of the individual graphic windows.
-- Again, check the exported output .txt file, .csv file, and .xml (SBML) file in the __BMSSlib-master/Examples/Results__ folder.  
+- Again, check the exported output *.txt* file, *.csv* file, and *.xml* (SBML) file in the __BMSSlib-master/Examples/Results__ folder.  
 
 [Spyder]: <https://docs.spyder-ide.org/overview.html>
 [Anaconda Documentation]: <https://docs.anaconda.com/anaconda/user-guide/getting-started/>
