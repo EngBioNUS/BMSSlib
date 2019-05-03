@@ -2,7 +2,7 @@
 """
 Released on April 29, 2019
 
-@author: Yeoh Jing Wui <bchyjw@nus.edu.sg>
+@author: Yeoh Jing Wui <bchyjw@nus.edu.sg>; Poh Chueh Loo <poh.chuehloo@nus.edu.sg>
 
 The code is part of BMSS software.
 
