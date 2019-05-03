@@ -1,5 +1,5 @@
 ```diff
-- # <Note: The BMSS system is still under development, and the package will be pip-installable after a while>
+- # <Note: A stable version BMSSlib_v1.0 has been released and is ready for download. However, the BMSS system here is still under development, and the package will be pip-installable after a while>
 ```
 
 # BMSSlib
