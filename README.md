@@ -60,7 +60,7 @@ All the pre-established model formulations available in the model bank are descr
 ![GitHub_ConstitutiveSystemfinal](https://user-images.githubusercontent.com/32381993/57120265-cf350a00-6da2-11e9-89ad-84f9b1335309.png)
 
 ### Logic Gate System
-![github_logicgatessystem](https://user-images.githubusercontent.com/32381993/50503680-a8d52a00-0aa3-11e9-9bab-680b900a6f4e.png)
+![GitHub_LogicGatesSystemfinal](https://user-images.githubusercontent.com/32381993/57120321-38b51880-6da3-11e9-8407-4c0ca017068d.png)
 
 
 ## References
