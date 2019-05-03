@@ -22,7 +22,7 @@
 
 ### The Output Specifications for the Example Files (to be inserted when prompted at console):
 
-__Note__: Insert only the Italic bold information
+<__Note__: Insert only the Italic bold information>
 
 __Inducible System__: 
 - Reporter type: __*RFP*__
@@ -48,7 +48,7 @@ __Logic Gate System__:
 - Name of gene 2: __*dCas9*__
 - Name of gene 3: __*GFP*__
 
- __Note__: With proper installation process, you should be able to run the example file without errors. If there is any error shown at the console after running the file, please restart your Spyder IDE and try again. If the error persists, please feel free to email the bugs to us at *EngBioBMSS.help@gmail.com* 
+<__Note__: With proper installation process, you should be able to run the example file without errors. If there is any error shown at the console after running the file, please restart your Spyder IDE and try again. If the error persists, please feel free to email the bugs to us at *EngBioBMSS.help@gmail.com*>
 
 [Spyder]: <https://docs.spyder-ide.org/overview.html>
 [Anaconda Documentation]: <https://docs.anaconda.com/anaconda/user-guide/getting-started/>
