@@ -57,7 +57,7 @@ All the pre-established model formulations available in the model bank are descr
 ![GitHub_InducibleSystemfinal](https://user-images.githubusercontent.com/32381993/57120134-be37c900-6da1-11e9-9493-38cc730a7cb4.png)
 
 ### Constitutive System
-![github_constitutivesystem](https://user-images.githubusercontent.com/32381993/50503415-d9b45f80-0aa1-11e9-9692-99b0fffde1a4.png)
+![GitHub_ConstitutiveSystemfinal](https://user-images.githubusercontent.com/32381993/57120265-cf350a00-6da2-11e9-89ad-84f9b1335309.png)
 
 ### Logic Gate System
 ![github_logicgatessystem](https://user-images.githubusercontent.com/32381993/50503680-a8d52a00-0aa3-11e9-9bab-680b900a6f4e.png)
