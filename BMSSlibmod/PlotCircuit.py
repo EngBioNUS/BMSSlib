@@ -1,8 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Aug 13 18:30:43 2018
+Released on April 29, 2019
 
-@author: jingwui
+@author: Yeoh Jing Wui <bchyjw@nus.edu.sg>; Poh Chueh Loo <poh.chuehloo@nus.edu.sg>
+
+The code is part of BMSS software.
+
+Copyright (c) 2019, National University of Singapore.
+
+This module is to print the Gene circuit using the modified code from quickplot.py in DNAplotlib library
+
+Reference: https://github.com/VoigtLab/dnaplotlib
+
 """
 
 ### This module is to print the Gene circuit using the modified code from quickplot.py
