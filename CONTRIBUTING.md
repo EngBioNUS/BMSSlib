@@ -3,9 +3,7 @@ Please review the following guidelines in order to make the contribution process
 
 ## Issue Tracker
 
-The issue tracker is the preferred channel for [bug reports](#bugs),
-[features requests](#features) and [submitting pull
-requests](#pull-requests), but please respect the following restrictions:
+The issue tracker is the preferred channel for [bug reports](#bugs), and [features requests](#features), but please respect the following restrictions:
 
 * Please **do not** use the issue tracker for personal support requests (use
   [Stack Overflow](http://stackoverflow.com)).
