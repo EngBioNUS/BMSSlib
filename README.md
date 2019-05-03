@@ -54,7 +54,7 @@ All the pre-established model formulations available in the model bank are descr
 
 ## BMSS-validated Results
 ### Inducible System
-![github_induciblesystem](https://user-images.githubusercontent.com/32381993/50501327-593a3280-0a92-11e9-9491-4574241672e3.png)
+![GitHub_InducibleSystem2](https://user-images.githubusercontent.com/32381993/57119799-7f087880-6d9f-11e9-8f1a-1c72e8250539.png)
 
 ### Constitutive System
 ![github_constitutivesystem](https://user-images.githubusercontent.com/32381993/50503415-d9b45f80-0aa1-11e9-9692-99b0fffde1a4.png)
