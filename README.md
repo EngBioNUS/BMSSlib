@@ -23,7 +23,7 @@ This package supports __*three*__ routinely used __gene regulatory systems__:
 
 __*Note*__: If you make use of BMSSlib in any publications, please kindly cite the following paper:
 
-<a href="https://pubs.acs.org/doi/10.1021/acssynbio.8b00523">Yeoh, J.W., Ivan Ng, K.B., Teh, A.Y., Zhang, JY., David Chee, W.K., Poh, C.L., "An Automated Bio-Model Selection System (BMSS) for Gene Circuit Designs", _ACS Synthetic Biology_, 2019. (DOI: 10.1021/acssynbio.8b00523)</a>
+<a href="https://pubs.acs.org/doi/10.1021/acssynbio.8b00523">Yeoh, J.W., Ivan Ng, K.B., Teh, A.Y., Zhang, JY., David Chee, W.K., and Poh, C.L., "An Automated Bio-Model Selection System (BMSS) for Gene Circuit Designs", _ACS Synthetic Biology_, 2019. (DOI: 10.1021/acssynbio.8b00523)</a>
 
 
 ## Installation
