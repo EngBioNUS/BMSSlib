@@ -3,9 +3,9 @@
 
 There are two subfolders inside the BMSSlib-master folder: 
 - __*BMSSlibmod*__: contains all the main source files
-- __*Examples*__: contains the example main files for the three gene regulatory systems (Inducible System, Constitutive System, and Logic Gate System), and the example input files (.csv) stored in the __*InputData*__ folder containing the characterization data. The generated output files are exported into the __*Results*__ folder.    
+- __*Examples*__: contains the example main files for the three gene regulatory systems (Inducible System, Constitutive System, and Logic Gate System), and the example user input files (.csv) stored in the __*InputData*__ folder containing the characterization data. The generated output files are exported into the __*Results*__ folder.    
 
-BMSSlib is implemented in Python 3.6.5 environment and can be soon installed using pip in Anaconda Prompt/terminal as shown below:
+BMSSlib is implemented in Python 3.6.5 environment and can be *soon* installed using pip in Anaconda Prompt/terminal as shown below:
 ```
 pip install BMSSlib
 ```
