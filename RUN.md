@@ -5,5 +5,5 @@
 
 
 
-[Spyder] <https://docs.spyder-ide.org/overview.html>
-[Anaconda Documentation] <https://docs.anaconda.com/anaconda/user-guide/getting-started/>
+[Spyder]: <https://docs.spyder-ide.org/overview.html>
+[Anaconda Documentation]: <https://docs.anaconda.com/anaconda/user-guide/getting-started/>
