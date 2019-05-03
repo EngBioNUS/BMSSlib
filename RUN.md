@@ -50,7 +50,7 @@ __Logic Gate System__:
 
 <__Note__: With proper installation process, you should be able to run the example file without errors. If there is any error shown at the console after running the file, please restart your Spyder IDE and try again. If the error persists, please feel free to email the bugs to us at *EngBioBMSS.help@gmail.com*>
 
-## To Run New User Input File 
+## To Run New Input Data File 
 - Prepare the processed characterization data file in .csv following the example characterization data files for a particular system (Inducible, Constitutive, Logic Gate System) provided in the __BMSSlib-master/Examples/InputData__ folder. More descriptions are also documented in the example python file. 
 - Saved the Input Data file in the __BMSSlib-master/Examples/InputData__ folder. __Note__: Follow the naming rules of starting with letters, then followed by letters, digits, or underscores. No spacing is allowed.   
 - At the corresponding Example file in Spyder, users can modify the Input_filename, NumDataSet/NumState, SystemOpt, or/and Inducer_unit and OptInhibition (only applicable for Inducible System) accordingly. 
