@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec 26 14:16:04 2018
+Released on April 29, 2019
 
-@author: JingWui
+@author: Yeoh Jing Wui <bchyjw@nus.edu.sg>
+
+The code is part of BMSS software.
+
+Copyright (c) 2019, National University of Singapore.
+
 """
 
 
