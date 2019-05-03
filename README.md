@@ -21,6 +21,10 @@ This package supports __*three*__ routinely used __gene regulatory systems__:
 - Generate SBOL visual-compliant gene circuit diagrams for the best model candidate 
 - Export Model Data in .csv file
 
+If you make use of BMSSlib in any publications, please kindly cite the following paper:
+<a href="https://pubs.acs.org/doi/10.1021/acssynbio.8b00523">Yeoh, J.W., Ivan Ng, K.B., Teh, A.Y., Zhang, JY., David Chee, W.K., Poh, C.L., "An Automated Bio-Model Selection System (BMSS) for Gene Circuit Designs", _ACS Synthetic Biology_, 2019. (DOI: 10.1021/acssynbio.8b00523)</a>
+
+
 ## Installation
 
 BMSSlib is implemented in *Python 3.6.5* environment and can be *soon* installed using *pip* as shown below:  
@@ -98,4 +102,5 @@ Anyone and everyone is welcome to contribute. Please review the [guidelines for 
    [constrNMPy]: <https://github.com/alexblaessle/constrNMPy>
    [Anaconda Distribution]: <https://www.anaconda.com/distribution/>
    [Anaconda Documentation]: <https://docs.anaconda.com/anaconda/user-guide/getting-started/>
+ 
 
