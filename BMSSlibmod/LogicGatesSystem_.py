@@ -407,7 +407,8 @@ class LogicGatesSystem:
                 self.Model_List.append('Model 3.10 - ORgateDelayDelayResCompete')
         
             else: 
-                print('Error in the selected logic gate system')
+                #raise custom exception
+                raise Exception('Error in the selected System Option')
         
         # -------------------------------------------------------------------------------- #
         
@@ -532,7 +533,7 @@ class LogicGatesSystem:
         
         if 'Substantial Support' in Evidence:
             Count = Evidence.count('Substantial Support')
-            BestEvidence = 'low confidence. There are ' + str(Count) + 'other comparably good models'
+            BestEvidence = 'low confidence. There are ' + str(Count) + ' other comparably good models'
         else:
             BestEvidence = 'confidence'
         
@@ -648,11 +649,11 @@ class LogicGatesSystem:
         
         PlotCircuitFile = input("Please insert 'yes/no' to set and visualize the gene circuit diagram:\n")
         
-        while not ((PlotCircuitFile == 'yes') or (PlotCircuitFile == 'no')):
+        while not ((PlotCircuitFile.casefold() == 'yes') or (PlotCircuitFile.casefold() == 'no')):
              PlotCircuitFile = input("Error: Incorrect Choice! Please insert either yes or no only:\n")
             
         
-        if PlotCircuitFile == 'yes':
+        if PlotCircuitFile.casefold() == 'yes':
             Reporter = input('Please insert Reporter type (RFP/GFP/YFP/BFP/...): \n')
             print('Reporter: ', Reporter)
             if Reporter == 'RFP':

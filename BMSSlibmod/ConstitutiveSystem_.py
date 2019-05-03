@@ -233,7 +233,7 @@ class ConstitutiveSystem:
                 self.Model_List.append('Model 4.1 - MultiDoubleFixPromoterKMat')
                 
             else: 
-                print('Error in the selected System Option')
+                raise Exception('Error in the selected System Option')
         
         
     def RunModelSelection(self):
@@ -354,7 +354,7 @@ class ConstitutiveSystem:
         
         if 'Substantial Support' in Evidence:
             Count = Evidence.count('Substantial Support')
-            BestEvidence = 'low confidence. There are ' + str(Count) + 'other comparably good models'
+            BestEvidence = 'low confidence. There are ' + str(Count) + ' other comparably good models'
         else:
             BestEvidence = 'confidence'
         
@@ -514,11 +514,11 @@ class ConstitutiveSystem:
         
         PlotCircuitFile = input("Please insert 'yes/no' to set and visualize the gene circuit diagram:")
         
-        while not ((PlotCircuitFile == 'yes') or (PlotCircuitFile =='no')):
+        while not ((PlotCircuitFile.casefold() == 'yes') or (PlotCircuitFile.casefold() =='no')):
              PlotCircuitFile = input("Error: Incorrect Choice! Please insert either yes or no only:\n")
         
         
-        if PlotCircuitFile == 'yes':
+        if PlotCircuitFile.casefold() == 'yes':
             Reporter = input('Please insert Reporter type (RFP/GFP/YFP/BFP/...): ')
             print('Reporter: ', Reporter)
             if Reporter == 'RFP':
