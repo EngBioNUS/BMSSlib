@@ -5,8 +5,7 @@ Please review the following guidelines in order to make the contribution process
 
 The issue tracker is the preferred channel for [bug reports](#bugs), and [features requests](#features), but please respect the following restrictions:
 
-* Please **do not** use the issue tracker for personal support requests (use
-  [Stack Overflow](http://stackoverflow.com)).
+* Never use the issue tracker for personal support requests (use [Stack Overflow](http://stackoverflow.com)).
 
 * Keep the discussion on topic and respect the opinions of others.
 
