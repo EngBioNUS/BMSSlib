@@ -18,7 +18,7 @@
 - After the run has completed, users will be prompted to insert either yes or no to export the model simulation data file (.csv).  
 - Next, users will be asked to insert yes or no to set and visualize the corresponding SBOL-compliant gene circuit diagram. 
 - The preview of the resulting sample circuits for each of the example files can be seen at the [GitHub Examples] folder.  
-- All the output files will be exported to the __BMSSlib-master/Examples/Results__ folder (There will be a total of three files named according to the Year-Month-Day-hour-minute the time the run is completed: *.txt* details the model ranking table and the recommended best model candidate with its model formulation and estimated parameters; *.csv* includes the model simulation results for post-processing; and *.xml* file encodes the details of the best model candidate in Systems Biology Markup Language (SBML) format. The SBML file can be imported to other CAD tools for post-processing or further simulations.   
+- All the output files will be exported to the __BMSSlib-master/Examples/Results__ folder (There will be a total of three files named according to the Year-Month-Day-hour-minute the time the run is completed: __*.txt*__ details the model ranking table and the recommended best model candidate with its model formulation and estimated parameters; __*.csv*__ includes the model simulation results for post-processing; and __*.xml*__ file encodes the details of the best model candidate in Systems Biology Markup Language (SBML) format. The SBML file can be imported to other CAD tools for post-processing or further simulations.   
 
 ### The Output Specifications for the Example Files (to be inserted when prompted at console):
 
