@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Aug  6 14:31:01 2018
+Released on April 29, 2019
 
-@author: jingwui
+@author: Yeoh Jing Wui <bchyjw@nus.edu.sg>; Ivan Ng Kai Boon; Poh Chueh Loo <poh.chuehloo@nus.edu.sg>
+
+The code is part of BMSS software.
+
+Copyright (c) 2019, National University of Singapore.
+
 """
 
 ### This module is to get the name for the BMSS-generated files ###
