@@ -11,7 +11,7 @@ setup(
   packages = ['BMSSlib'],   # Chose the same as "name"
   version = '1.0',      # Start with a small number and increase it with every change you make
   license='Apache license 2.0',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'Bio-Model Selection System',   
+  description = 'An Automated Bio-Model Selection System (BMSS) for Gene Circuit Designs',   
   author = 'Jing Wui Yeoh', 'Chueh Loo Poh',   
   author_email = 'yeohjingwui@gmail.com', 'poh.chuehloo@nus.edu.sg',      
   url = 'https://github.com/EngBioNUS/BMSSlib',   # Provide either the link to your github or to your website
