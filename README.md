@@ -25,6 +25,8 @@ __*Note*__: If you make use of BMSSlib in any publications, please kindly cite t
 
 <a href="https://pubs.acs.org/doi/10.1021/acssynbio.8b00523">Yeoh, J.W., Ivan Ng, K.B., Teh, A.Y., Zhang, JY., David Chee, W.K., and Poh, C.L., "An Automated Bio-Model Selection System (BMSS) for Gene Circuit Designs", _ACS Synthetic Biology_, 2019. (DOI: 10.1021/acssynbio.8b00523)</a>
 
+Refer to the [BMSS webpage] for more details and [Tutorial video] for Beginners. Kindly explore [Engineering Biology Lab website] to get to know more about other projects.  
+
 
 ## Installation
 
@@ -103,5 +105,8 @@ Anyone and everyone is welcome to contribute. Please review the [guidelines for 
    [constrNMPy]: <https://github.com/alexblaessle/constrNMPy>
    [Anaconda Distribution]: <https://www.anaconda.com/distribution/>
    [Anaconda Documentation]: <https://docs.anaconda.com/anaconda/user-guide/getting-started/>
+   [Engineering Biology Lab website]: <http://www.bioeng.nus.edu.sg/engbio/index.html>
+   [BMSS webpage]: <http://www.bioeng.nus.edu.sg/engbio/software.html>
+   [Tutorial video]: <https://youtu.be/IpTz3ei4Ct8>
  
 
