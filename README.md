@@ -21,7 +21,7 @@ This package supports __*three*__ routinely used __gene regulatory systems__:
 - Generate SBOL visual-compliant gene circuit diagrams for the best model candidate 
 - Export Model Data in .csv file
 
-Refer to the [BMSS webpage] for more details and [Tutorial video] for Beginners. Kindly explore [Engineering Biology Lab website] to get to know more about other projects.  
+Refer to the [BMSS webpage] for more details and [Tutorial video] for Beginners. Kindly explore [NUS Engineering Biology Lab website] to get to know more about other projects.  
 
 __*Note*__: If you make use of BMSSlib in any publications, please kindly cite the following paper:
 
