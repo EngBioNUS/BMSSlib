@@ -104,7 +104,7 @@ Anyone and everyone is welcome to contribute. Please review the [guidelines for 
    [constrNMPy]: <https://github.com/alexblaessle/constrNMPy>
    [Anaconda Distribution]: <https://www.anaconda.com/distribution/>
    [Anaconda Documentation]: <https://docs.anaconda.com/anaconda/user-guide/getting-started/>
-   [Engineering Biology Lab website]: <http://www.bioeng.nus.edu.sg/engbio/index.html>
+   [NUS Engineering Biology Lab website]: <http://www.bioeng.nus.edu.sg/engbio/index.html>
    [BMSS webpage]: <http://www.bioeng.nus.edu.sg/engbio/software.html>
    [Tutorial video]: <https://youtu.be/IpTz3ei4Ct8>
  
