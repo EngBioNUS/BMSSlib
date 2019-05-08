@@ -13,8 +13,7 @@ The issue tracker is the preferred channel for [bug reports](#bugs), and [featur
 <a name="bugs"></a>
 ## Bug reports
 
-A bug is a _demonstrable problem_ that is caused by the code in the repository.
-Good bug reports are extremely helpful!
+A bug is a _demonstrable problem_ that is caused by the code in the repository. Good bug reports are extremely helpful in debugging!
 
 Guidelines for bug reports:
 
