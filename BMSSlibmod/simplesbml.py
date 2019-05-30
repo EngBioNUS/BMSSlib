@@ -113,7 +113,9 @@ class sbmlModel(object):
         unit = Dimension_less.createUnit()
         self.check(unit,                               'create unit')
         self.check(unit.setKind(libsbml.UNIT_KIND_DIMENSIONLESS),     'set unit kind')
-
+        self.check(unit.setExponent(0),               'set unit exponent')
+        self.check(unit.setScale(0),                   'set unit scale')
+        self.check(unit.setMultiplier(0),              'set unit multiplier')
 
         self.addCompartment()
 
